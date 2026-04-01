@@ -1,0 +1,14 @@
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.Model\bin\Debug\net10.0\InnSystem.Model.deps.json
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.Model\bin\Debug\net10.0\InnSystem.Model.runtimeconfig.json
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.Model\bin\Debug\net10.0\InnSystem.Model.dll
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.Model\bin\Debug\net10.0\InnSystem.Model.pdb
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.Model\obj\Debug\net10.0\InnSystem.Model.csproj.AssemblyReference.cache
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.Model\obj\Debug\net10.0\InnSystem.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.Model\obj\Debug\net10.0\InnSystem.Model.AssemblyInfoInputs.cache
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.Model\obj\Debug\net10.0\InnSystem.Model.AssemblyInfo.cs
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.Model\obj\Debug\net10.0\InnSystem.Model.csproj.CoreCompileInputs.cache
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.Model\obj\Debug\net10.0\InnSystem.Model.dll
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.Model\obj\Debug\net10.0\refint\InnSystem.Model.dll
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.Model\obj\Debug\net10.0\InnSystem.Model.pdb
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.Model\obj\Debug\net10.0\InnSystem.Model.genruntimeconfig.cache
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.Model\obj\Debug\net10.0\ref\InnSystem.Model.dll

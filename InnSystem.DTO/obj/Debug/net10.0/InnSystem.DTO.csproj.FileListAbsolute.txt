@@ -1,0 +1,11 @@
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.DTO\bin\Debug\net10.0\InnSystem.DTO.deps.json
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.DTO\bin\Debug\net10.0\InnSystem.DTO.dll
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.DTO\bin\Debug\net10.0\InnSystem.DTO.pdb
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.DTO\obj\Debug\net10.0\InnSystem.DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.DTO\obj\Debug\net10.0\InnSystem.DTO.AssemblyInfoInputs.cache
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.DTO\obj\Debug\net10.0\InnSystem.DTO.AssemblyInfo.cs
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.DTO\obj\Debug\net10.0\InnSystem.DTO.csproj.CoreCompileInputs.cache
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.DTO\obj\Debug\net10.0\InnSystem.DTO.dll
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.DTO\obj\Debug\net10.0\refint\InnSystem.DTO.dll
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.DTO\obj\Debug\net10.0\InnSystem.DTO.pdb
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.DTO\obj\Debug\net10.0\ref\InnSystem.DTO.dll

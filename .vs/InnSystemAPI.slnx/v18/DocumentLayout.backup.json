@@ -1,0 +1,132 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A78E3633-4191-43AF-8703-5E6B1B20E135}|InnSystem.API\\InnSystem.API.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A78E3633-4191-43AF-8703-5E6B1B20E135}|InnSystem.API\\InnSystem.API.csproj|solutionrelative:innsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7514486E-D326-4706-8EEB-80E118DBB6C1}|InnSystem.IOC\\InnSystem.IOC.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.ioc\\dependency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7514486E-D326-4706-8EEB-80E118DBB6C1}|InnSystem.IOC\\InnSystem.IOC.csproj|solutionrelative:innsystem.ioc\\dependency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A78E3633-4191-43AF-8703-5E6B1B20E135}|InnSystem.API\\InnSystem.API.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A78E3633-4191-43AF-8703-5E6B1B20E135}|InnSystem.API\\InnSystem.API.csproj|solutionrelative:innsystem.api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A78E3633-4191-43AF-8703-5E6B1B20E135}|InnSystem.API\\InnSystem.API.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A78E3633-4191-43AF-8703-5E6B1B20E135}|InnSystem.API\\InnSystem.API.csproj|solutionrelative:innsystem.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22E7CCE3-6C7E-4E8D-A8C3-E5F73E831980}|InnSystem.DAL\\InnSystem.DAL.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.dal\\dbcontext\\inndbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22E7CCE3-6C7E-4E8D-A8C3-E5F73E831980}|InnSystem.DAL\\InnSystem.DAL.csproj|solutionrelative:innsystem.dal\\dbcontext\\inndbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29A616D0-8DA2-47E2-84C9-1C9EB6663262}|InnSystem.Utility\\InnSystem.Utility.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.utility\\innsystem.utility.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{29A616D0-8DA2-47E2-84C9-1C9EB6663262}|InnSystem.Utility\\InnSystem.Utility.csproj|solutionrelative:innsystem.utility\\innsystem.utility.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 202,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 202,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.API\\Program.cs",
+              "RelativeDocumentMoniker": "InnSystem.API\\Program.cs",
+              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.API\\Program.cs*",
+              "RelativeToolTip": "InnSystem.API\\Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T03:29:07.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.API\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "InnSystem.API\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.API\\WeatherForecast.cs",
+              "RelativeToolTip": "InnSystem.API\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T03:29:06.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dependency.cs",
+              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.IOC\\Dependency.cs",
+              "RelativeDocumentMoniker": "InnSystem.IOC\\Dependency.cs",
+              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.IOC\\Dependency.cs",
+              "RelativeToolTip": "InnSystem.IOC\\Dependency.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T03:19:45.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.API\\appsettings.json",
+              "RelativeDocumentMoniker": "InnSystem.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.API\\appsettings.json",
+              "RelativeToolTip": "InnSystem.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-01T03:15:57.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "InnSystem.Utility",
+              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.Utility\\InnSystem.Utility.csproj",
+              "RelativeDocumentMoniker": "InnSystem.Utility\\InnSystem.Utility.csproj",
+              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.Utility\\InnSystem.Utility.csproj",
+              "RelativeToolTip": "InnSystem.Utility\\InnSystem.Utility.csproj",
+              "ViewState": "AgIAAA0AAADgKmFsFlQlwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-01T02:03:15.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "InnDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.DAL\\DBContext\\InnDbContext.cs",
+              "RelativeDocumentMoniker": "InnSystem.DAL\\DBContext\\InnDbContext.cs",
+              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.DAL\\DBContext\\InnDbContext.cs",
+              "RelativeToolTip": "InnSystem.DAL\\DBContext\\InnDbContext.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowC0AAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T21:39:56.597Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
