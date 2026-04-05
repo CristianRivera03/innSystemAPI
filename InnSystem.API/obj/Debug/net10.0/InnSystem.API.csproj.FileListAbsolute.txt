@@ -51,3 +51,9 @@ C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.API\bin\Debug\net10.0\InnSyst
 C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.API\bin\Debug\net10.0\InnSystem.Utility.pdb
 C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.API\bin\Debug\net10.0\Scalar.AspNetCore.dll
 C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.API\obj\Debug\net10.0\InnSystem.API.sourcelink.json
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.API\bin\Debug\net10.0\AutoMapper.dll
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.API\bin\Debug\net10.0\BCrypt.Net-Next.dll
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.API\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.API\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.API\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.API\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll

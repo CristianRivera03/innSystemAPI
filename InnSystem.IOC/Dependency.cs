@@ -1,4 +1,4 @@
-﻿using InnSystem.DAL.DBConext;
+using InnSystem.DAL.DBConext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -8,6 +8,8 @@ using System.Text;
 
 using InnSystem.DAL.Repositories.Contract;
 using InnSystem.DAL.Repositories;
+using InnSystem.BLL.Services.Contract;
+using InnSystem.BLL.Services;
 using InnSystem.Utility;
 
 namespace InnSystem.IOC
@@ -35,6 +37,8 @@ namespace InnSystem.IOC
             }, typeof(AutoMapperProfile));
 
 
+            //Servicios
+            services.AddScoped<IBookingService, BookingService>();
 
         }
     }

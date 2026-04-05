@@ -9,3 +9,4 @@ C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.DTO\obj\Debug\net10.0\InnSyst
 C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.DTO\obj\Debug\net10.0\refint\InnSystem.DTO.dll
 C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.DTO\obj\Debug\net10.0\InnSystem.DTO.pdb
 C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.DTO\obj\Debug\net10.0\ref\InnSystem.DTO.dll
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.DTO\obj\Debug\net10.0\InnSystem.DTO.sourcelink.json

@@ -12,8 +12,8 @@ namespace InnSystem.DTO.Bookings
         public string Phone { get; set; } = null!;
         public string DocumentId { get; set; } = null!;
         public int IdRoom { get; set; }
-        public DateTime CheckIn { get; set; }
-        public DateTime CheckOut { get; set; }
+        public DateOnly CheckIn { get; set; }
+        public DateOnly CheckOut { get; set; }
         public int GuestsCount { get; set; }
         public decimal TotalCost { get; set; }
         public string? Status { get; set; }

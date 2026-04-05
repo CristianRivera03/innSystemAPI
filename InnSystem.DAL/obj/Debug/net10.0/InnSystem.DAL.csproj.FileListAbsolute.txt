@@ -13,3 +13,4 @@ C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.DAL\bin\Debug\net10.0\InnSyst
 C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.DAL\bin\Debug\net10.0\InnSystem.Model.pdb
 C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.DAL\obj\Debug\net10.0\InnSystem.DAL.csproj.AssemblyReference.cache
 C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.DAL\obj\Debug\net10.0\InnSyste.44210149.Up2Date
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.DAL\obj\Debug\net10.0\InnSystem.DAL.sourcelink.json

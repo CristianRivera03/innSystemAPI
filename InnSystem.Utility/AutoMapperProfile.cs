@@ -38,8 +38,7 @@ namespace InnSystem.Utility
 
                 .ForMember(destino =>
                         destino.AllowedModules,
-                        //saca el modulo de cada registro rm module
-                        opt => opt.MapFrom(origen => origen.IdRoleNavigation.Rolemodules.Select(rm => rm.Module))
+                        opt => opt.MapFrom(origen => origen.IdRoleNavigation.IdModules)
                     );
 
             #endregion Users
