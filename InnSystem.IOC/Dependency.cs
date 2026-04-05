@@ -6,6 +6,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using InnSystem.DAL.Repositories.Contract;
+using InnSystem.DAL.Repositories;
+using InnSystem.Utility;
+
 namespace InnSystem.IOC
 {
     public static class Dependency
@@ -18,6 +22,20 @@ namespace InnSystem.IOC
                 //aca llama la conexion de la api en app setting 
                 options.UseNpgsql(configuration.GetConnectionString("connectionDB"));
             });
+
+            //Dependecnecia de repositorios
+            services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped<IBookingRepository, BookingRepository>();
+            services.AddScoped<IPaymentRepository, PaymentRepository>();
+
+
+            //automapper 
+            services.AddAutoMapper(cfg => {
+                cfg.AddProfile<AutoMapperProfile>();
+            }, typeof(AutoMapperProfile));
+
+
+
         }
     }
 }

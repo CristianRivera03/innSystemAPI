@@ -52,9 +52,9 @@
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.API\\Program.cs",
               "RelativeDocumentMoniker": "InnSystem.API\\Program.cs",
-              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.API\\Program.cs*",
-              "RelativeToolTip": "InnSystem.API\\Program.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAZAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.API\\Program.cs",
+              "RelativeToolTip": "InnSystem.API\\Program.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwB4AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-01T03:29:07.647Z",
               "EditorCaption": ""
@@ -69,8 +69,7 @@
               "RelativeToolTip": "InnSystem.API\\WeatherForecast.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T03:29:06.915Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-01T03:29:06.915Z"
             },
             {
               "$type": "Document",
@@ -82,8 +81,7 @@
               "RelativeToolTip": "InnSystem.IOC\\Dependency.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T03:19:45.672Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-01T03:19:45.672Z"
             },
             {
               "$type": "Document",
@@ -95,21 +93,19 @@
               "RelativeToolTip": "InnSystem.API\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-01T03:15:57.022Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-01T03:15:57.022Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "InnSystem.Utility",
+              "Title": "InnSystem.Utility.csproj",
               "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.Utility\\InnSystem.Utility.csproj",
               "RelativeDocumentMoniker": "InnSystem.Utility\\InnSystem.Utility.csproj",
               "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.Utility\\InnSystem.Utility.csproj",
               "RelativeToolTip": "InnSystem.Utility\\InnSystem.Utility.csproj",
               "ViewState": "AgIAAA0AAADgKmFsFlQlwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-04-01T02:03:15.311Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-01T02:03:15.311Z"
             },
             {
               "$type": "Document",
@@ -121,8 +117,7 @@
               "RelativeToolTip": "InnSystem.DAL\\DBContext\\InnDbContext.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAowC0AAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T21:39:56.597Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-31T21:39:56.597Z"
             }
           ]
         }

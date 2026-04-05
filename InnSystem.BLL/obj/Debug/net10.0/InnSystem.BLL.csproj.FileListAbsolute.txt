@@ -19,3 +19,4 @@ C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.BLL\bin\Debug\net10.0\InnSyst
 C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.BLL\bin\Debug\net10.0\InnSystem.Utility.pdb
 C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.BLL\obj\Debug\net10.0\InnSystem.BLL.csproj.AssemblyReference.cache
 C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.BLL\obj\Debug\net10.0\InnSyste.1FD9C4FF.Up2Date
+C:\Users\Criis\source\repos\InnSystemAPI\InnSystem.BLL\obj\Debug\net10.0\InnSystem.BLL.sourcelink.json
