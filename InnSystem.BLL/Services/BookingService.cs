@@ -30,7 +30,6 @@ namespace InnSystem.BLL.Services
             try
             {
                 var queryBooking = _bookingRepository.Query();
-                // Incluimos la relación del usuario ('IdUserNavigation') para que AutoMapper tenga la información disponible
                 var listBooking = await queryBooking.Include(b => b.IdUserNavigation).ToListAsync();
 
                 return _mapper.Map<List<BookingDTO>>(listBooking);

@@ -3,92 +3,68 @@
   "WorkspaceRootPath": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A78E3633-4191-43AF-8703-5E6B1B20E135}|InnSystem.API\\InnSystem.API.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.api\\innsystem.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{A78E3633-4191-43AF-8703-5E6B1B20E135}|InnSystem.API\\InnSystem.API.csproj|solutionrelative:innsystem.api\\innsystem.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+      "AbsoluteMoniker": "D:0:0:{7514486E-D326-4706-8EEB-80E118DBB6C1}|InnSystem.IOC\\InnSystem.IOC.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.ioc\\dependency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7514486E-D326-4706-8EEB-80E118DBB6C1}|InnSystem.IOC\\InnSystem.IOC.csproj|solutionrelative:innsystem.ioc\\dependency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A78E3633-4191-43AF-8703-5E6B1B20E135}|InnSystem.API\\InnSystem.API.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.api\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A78E3633-4191-43AF-8703-5E6B1B20E135}|InnSystem.API\\InnSystem.API.csproj|solutionrelative:innsystem.api\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A78E3633-4191-43AF-8703-5E6B1B20E135}|InnSystem.API\\InnSystem.API.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.api\\controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A78E3633-4191-43AF-8703-5E6B1B20E135}|InnSystem.API\\InnSystem.API.csproj|solutionrelative:innsystem.api\\controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A7C12A6-99E7-4DA4-B32C-5D5D14242944}|InnSystem.BLL\\InnSystem.BLL.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.bll\\services\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A7C12A6-99E7-4DA4-B32C-5D5D14242944}|InnSystem.BLL\\InnSystem.BLL.csproj|solutionrelative:innsystem.bll\\services\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A7C12A6-99E7-4DA4-B32C-5D5D14242944}|InnSystem.BLL\\InnSystem.BLL.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.bll\\services\\contract\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A7C12A6-99E7-4DA4-B32C-5D5D14242944}|InnSystem.BLL\\InnSystem.BLL.csproj|solutionrelative:innsystem.bll\\services\\contract\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A7C12A6-99E7-4DA4-B32C-5D5D14242944}|InnSystem.BLL\\InnSystem.BLL.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.bll\\services\\contract\\iroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A7C12A6-99E7-4DA4-B32C-5D5D14242944}|InnSystem.BLL\\InnSystem.BLL.csproj|solutionrelative:innsystem.bll\\services\\contract\\iroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A78E3633-4191-43AF-8703-5E6B1B20E135}|InnSystem.API\\InnSystem.API.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.api\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A78E3633-4191-43AF-8703-5E6B1B20E135}|InnSystem.API\\InnSystem.API.csproj|solutionrelative:innsystem.api\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7514486E-D326-4706-8EEB-80E118DBB6C1}|InnSystem.IOC\\InnSystem.IOC.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.ioc\\dependency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7514486E-D326-4706-8EEB-80E118DBB6C1}|InnSystem.IOC\\InnSystem.IOC.csproj|solutionrelative:innsystem.ioc\\dependency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A78E3633-4191-43AF-8703-5E6B1B20E135}|InnSystem.API\\InnSystem.API.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.api\\utility\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A78E3633-4191-43AF-8703-5E6B1B20E135}|InnSystem.API\\InnSystem.API.csproj|solutionrelative:innsystem.api\\utility\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E754C6E-8C4E-4941-9CEC-018D81C46C96}|InnSystem.DTO\\InnSystem.DTO.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.dto\\bookings\\bookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E754C6E-8C4E-4941-9CEC-018D81C46C96}|InnSystem.DTO\\InnSystem.DTO.csproj|solutionrelative:innsystem.dto\\bookings\\bookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2A7C12A6-99E7-4DA4-B32C-5D5D14242944}|InnSystem.BLL\\InnSystem.BLL.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.bll\\services\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A7C12A6-99E7-4DA4-B32C-5D5D14242944}|InnSystem.BLL\\InnSystem.BLL.csproj|solutionrelative:innsystem.bll\\services\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2A7C12A6-99E7-4DA4-B32C-5D5D14242944}|InnSystem.BLL\\InnSystem.BLL.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.bll\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2A7C12A6-99E7-4DA4-B32C-5D5D14242944}|InnSystem.BLL\\InnSystem.BLL.csproj|solutionrelative:innsystem.bll\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7E754C6E-8C4E-4941-9CEC-018D81C46C96}|InnSystem.DTO\\InnSystem.DTO.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.dto\\roles\\roledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E754C6E-8C4E-4941-9CEC-018D81C46C96}|InnSystem.DTO\\InnSystem.DTO.csproj|solutionrelative:innsystem.dto\\roles\\roledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2A7C12A6-99E7-4DA4-B32C-5D5D14242944}|InnSystem.BLL\\InnSystem.BLL.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.bll\\services\\contract\\ibookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2A7C12A6-99E7-4DA4-B32C-5D5D14242944}|InnSystem.BLL\\InnSystem.BLL.csproj|solutionrelative:innsystem.bll\\services\\contract\\ibookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7514486E-D326-4706-8EEB-80E118DBB6C1}|InnSystem.IOC\\InnSystem.IOC.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.ioc\\innsystem.ioc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7514486E-D326-4706-8EEB-80E118DBB6C1}|InnSystem.IOC\\InnSystem.IOC.csproj|solutionrelative:innsystem.ioc\\innsystem.ioc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{22E7CCE3-6C7E-4E8D-A8C3-E5F73E831980}|InnSystem.DAL\\InnSystem.DAL.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.dal\\dbcontext\\inndbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{22E7CCE3-6C7E-4E8D-A8C3-E5F73E831980}|InnSystem.DAL\\InnSystem.DAL.csproj|solutionrelative:innsystem.dal\\dbcontext\\inndbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{29A616D0-8DA2-47E2-84C9-1C9EB6663262}|InnSystem.Utility\\InnSystem.Utility.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.utility\\automapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29A616D0-8DA2-47E2-84C9-1C9EB6663262}|InnSystem.Utility\\InnSystem.Utility.csproj|solutionrelative:innsystem.utility\\automapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{22E7CCE3-6C7E-4E8D-A8C3-E5F73E831980}|InnSystem.DAL\\InnSystem.DAL.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.dal\\innsystem.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{22E7CCE3-6C7E-4E8D-A8C3-E5F73E831980}|InnSystem.DAL\\InnSystem.DAL.csproj|solutionrelative:innsystem.dal\\innsystem.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E754C6E-8C4E-4941-9CEC-018D81C46C96}|InnSystem.DTO\\InnSystem.DTO.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.dto\\users\\sessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E754C6E-8C4E-4941-9CEC-018D81C46C96}|InnSystem.DTO\\InnSystem.DTO.csproj|solutionrelative:innsystem.dto\\users\\sessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4C33F3F-2A61-49B7-A4D8-207EA808790F}|InnSystem.Model\\InnSystem.Model.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.model\\innsystem.model.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A4C33F3F-2A61-49B7-A4D8-207EA808790F}|InnSystem.Model\\InnSystem.Model.csproj|solutionrelative:innsystem.model\\innsystem.model.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E754C6E-8C4E-4941-9CEC-018D81C46C96}|InnSystem.DTO\\InnSystem.DTO.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.dto\\users\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E754C6E-8C4E-4941-9CEC-018D81C46C96}|InnSystem.DTO\\InnSystem.DTO.csproj|solutionrelative:innsystem.dto\\users\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A4C33F3F-2A61-49B7-A4D8-207EA808790F}|InnSystem.Model\\InnSystem.Model.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4C33F3F-2A61-49B7-A4D8-207EA808790F}|InnSystem.Model\\InnSystem.Model.csproj|solutionrelative:innsystem.model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E754C6E-8C4E-4941-9CEC-018D81C46C96}|InnSystem.DTO\\InnSystem.DTO.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.dto\\roles\\moduledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E754C6E-8C4E-4941-9CEC-018D81C46C96}|InnSystem.DTO\\InnSystem.DTO.csproj|solutionrelative:innsystem.dto\\roles\\moduledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A4C33F3F-2A61-49B7-A4D8-207EA808790F}|InnSystem.Model\\InnSystem.Model.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.model\\module.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4C33F3F-2A61-49B7-A4D8-207EA808790F}|InnSystem.Model\\InnSystem.Model.csproj|solutionrelative:innsystem.model\\module.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A7C12A6-99E7-4DA4-B32C-5D5D14242944}|InnSystem.BLL\\InnSystem.BLL.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.bll\\services\\contract\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A7C12A6-99E7-4DA4-B32C-5D5D14242944}|InnSystem.BLL\\InnSystem.BLL.csproj|solutionrelative:innsystem.bll\\services\\contract\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A4C33F3F-2A61-49B7-A4D8-207EA808790F}|InnSystem.Model\\InnSystem.Model.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.model\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4C33F3F-2A61-49B7-A4D8-207EA808790F}|InnSystem.Model\\InnSystem.Model.csproj|solutionrelative:innsystem.model\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29A616D0-8DA2-47E2-84C9-1C9EB6663262}|InnSystem.Utility\\InnSystem.Utility.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.utility\\innsystem.utility.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{29A616D0-8DA2-47E2-84C9-1C9EB6663262}|InnSystem.Utility\\InnSystem.Utility.csproj|solutionrelative:innsystem.utility\\innsystem.utility.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A4C33F3F-2A61-49B7-A4D8-207EA808790F}|InnSystem.Model\\InnSystem.Model.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.model\\actionlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4C33F3F-2A61-49B7-A4D8-207EA808790F}|InnSystem.Model\\InnSystem.Model.csproj|solutionrelative:innsystem.model\\actionlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A4C33F3F-2A61-49B7-A4D8-207EA808790F}|InnSystem.Model\\InnSystem.Model.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.model\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4C33F3F-2A61-49B7-A4D8-207EA808790F}|InnSystem.Model\\InnSystem.Model.csproj|solutionrelative:innsystem.model\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A4C33F3F-2A61-49B7-A4D8-207EA808790F}|InnSystem.Model\\InnSystem.Model.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.model\\invoicetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4C33F3F-2A61-49B7-A4D8-207EA808790F}|InnSystem.Model\\InnSystem.Model.csproj|solutionrelative:innsystem.model\\invoicetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A78E3633-4191-43AF-8703-5E6B1B20E135}|InnSystem.API\\InnSystem.API.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A78E3633-4191-43AF-8703-5E6B1B20E135}|InnSystem.API\\InnSystem.API.csproj|solutionrelative:innsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A78E3633-4191-43AF-8703-5E6B1B20E135}|InnSystem.API\\InnSystem.API.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A78E3633-4191-43AF-8703-5E6B1B20E135}|InnSystem.API\\InnSystem.API.csproj|solutionrelative:innsystem.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{A4C33F3F-2A61-49B7-A4D8-207EA808790F}|InnSystem.Model\\InnSystem.Model.csproj|c:\\users\\criis\\source\\repos\\innsystemapi\\innsystem.model\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4C33F3F-2A61-49B7-A4D8-207EA808790F}|InnSystem.Model\\InnSystem.Model.csproj|solutionrelative:innsystem.model\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -97,290 +73,219 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 202,
-          "SelectedChildIndex": -1,
+          "DockedWidth": 327,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 202,
-          "SelectedChildIndex": 0,
-          "Children": [
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "InnSystem.API.http",
-              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.API\\InnSystem.API.http",
-              "RelativeDocumentMoniker": "InnSystem.API\\InnSystem.API.http",
-              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.API\\InnSystem.API.http",
-              "RelativeToolTip": "InnSystem.API\\InnSystem.API.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-04-05T06:04:48.849Z",
+              "Title": "Dependency.cs",
+              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.IOC\\Dependency.cs",
+              "RelativeDocumentMoniker": "InnSystem.IOC\\Dependency.cs",
+              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.IOC\\Dependency.cs*",
+              "RelativeToolTip": "InnSystem.IOC\\Dependency.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T01:26:11.942Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "BookingController.cs",
-              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.API\\Controllers\\BookingController.cs",
-              "RelativeDocumentMoniker": "InnSystem.API\\Controllers\\BookingController.cs",
-              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.API\\Controllers\\BookingController.cs",
-              "RelativeToolTip": "InnSystem.API\\Controllers\\BookingController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAbAAAAAAAAAA==",
+              "Title": "RoleController.cs",
+              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.API\\Controllers\\RoleController.cs",
+              "RelativeDocumentMoniker": "InnSystem.API\\Controllers\\RoleController.cs",
+              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.API\\Controllers\\RoleController.cs",
+              "RelativeToolTip": "InnSystem.API\\Controllers\\RoleController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T05:58:39.927Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Response.cs",
-              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.API\\Utility\\Response.cs",
-              "RelativeDocumentMoniker": "InnSystem.API\\Utility\\Response.cs",
-              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.API\\Utility\\Response.cs",
-              "RelativeToolTip": "InnSystem.API\\Utility\\Response.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T05:58:00.204Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BookingService.cs",
-              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.BLL\\Services\\BookingService.cs",
-              "RelativeDocumentMoniker": "InnSystem.BLL\\Services\\BookingService.cs",
-              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.BLL\\Services\\BookingService.cs",
-              "RelativeToolTip": "InnSystem.BLL\\Services\\BookingService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T05:43:58.211Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BookingDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.DTO\\Bookings\\BookingDTO.cs",
-              "RelativeDocumentMoniker": "InnSystem.DTO\\Bookings\\BookingDTO.cs",
-              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.DTO\\Bookings\\BookingDTO.cs",
-              "RelativeToolTip": "InnSystem.DTO\\Bookings\\BookingDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBEAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T05:38:24.315Z",
+              "WhenOpened": "2026-04-14T01:11:25.17Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Dependency.cs",
-              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.IOC\\Dependency.cs",
-              "RelativeDocumentMoniker": "InnSystem.IOC\\Dependency.cs",
-              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.IOC\\Dependency.cs",
-              "RelativeToolTip": "InnSystem.IOC\\Dependency.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "Title": "RoomController.cs",
+              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.API\\Controllers\\RoomController.cs",
+              "RelativeDocumentMoniker": "InnSystem.API\\Controllers\\RoomController.cs",
+              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.API\\Controllers\\RoomController.cs",
+              "RelativeToolTip": "InnSystem.API\\Controllers\\RoomController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACEAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T03:19:45.672Z",
+              "WhenOpened": "2026-04-13T23:39:12.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IRoleService.cs",
+              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.BLL\\Services\\Contract\\IRoleService.cs",
+              "RelativeDocumentMoniker": "InnSystem.BLL\\Services\\Contract\\IRoleService.cs",
+              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.BLL\\Services\\Contract\\IRoleService.cs",
+              "RelativeToolTip": "InnSystem.BLL\\Services\\Contract\\IRoleService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T00:57:42.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RoleService.cs",
+              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.BLL\\Services\\RoleService.cs",
+              "RelativeDocumentMoniker": "InnSystem.BLL\\Services\\RoleService.cs",
+              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.BLL\\Services\\RoleService.cs",
+              "RelativeToolTip": "InnSystem.BLL\\Services\\RoleService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T01:00:32.999Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "IBookingService.cs",
-              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.BLL\\Services\\Contract\\IBookingService.cs",
-              "RelativeDocumentMoniker": "InnSystem.BLL\\Services\\Contract\\IBookingService.cs",
-              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.BLL\\Services\\Contract\\IBookingService.cs",
-              "RelativeToolTip": "InnSystem.BLL\\Services\\Contract\\IBookingService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
+              "Title": "BookingController.cs",
+              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.API\\Controllers\\BookingController.cs",
+              "RelativeDocumentMoniker": "InnSystem.API\\Controllers\\BookingController.cs",
+              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.API\\Controllers\\BookingController.cs",
+              "RelativeToolTip": "InnSystem.API\\Controllers\\BookingController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T05:36:52.755Z",
+              "WhenOpened": "2026-04-14T01:10:49.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RoleDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.DTO\\Roles\\RoleDTO.cs",
+              "RelativeDocumentMoniker": "InnSystem.DTO\\Roles\\RoleDTO.cs",
+              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.DTO\\Roles\\RoleDTO.cs",
+              "RelativeToolTip": "InnSystem.DTO\\Roles\\RoleDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T00:59:12.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BookingService.cs",
+              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.BLL\\Services\\BookingService.cs",
+              "RelativeDocumentMoniker": "InnSystem.BLL\\Services\\BookingService.cs",
+              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.BLL\\Services\\BookingService.cs",
+              "RelativeToolTip": "InnSystem.BLL\\Services\\BookingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T01:01:00.412Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "LoginDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.DTO\\Users\\LoginDTO.cs",
-              "RelativeDocumentMoniker": "InnSystem.DTO\\Users\\LoginDTO.cs",
-              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.DTO\\Users\\LoginDTO.cs",
-              "RelativeToolTip": "InnSystem.DTO\\Users\\LoginDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Title": "IBookingService.cs",
+              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.BLL\\Services\\Contract\\IBookingService.cs",
+              "RelativeDocumentMoniker": "InnSystem.BLL\\Services\\Contract\\IBookingService.cs",
+              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.BLL\\Services\\Contract\\IBookingService.cs",
+              "RelativeToolTip": "InnSystem.BLL\\Services\\Contract\\IBookingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T04:42:29.938Z"
+              "WhenOpened": "2026-04-14T00:57:14.752Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.Model\\User.cs",
-              "RelativeDocumentMoniker": "InnSystem.Model\\User.cs",
-              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.Model\\User.cs",
-              "RelativeToolTip": "InnSystem.Model\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T04:43:14.512Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SessionDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.DTO\\Users\\SessionDTO.cs",
-              "RelativeDocumentMoniker": "InnSystem.DTO\\Users\\SessionDTO.cs",
-              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.DTO\\Users\\SessionDTO.cs",
-              "RelativeToolTip": "InnSystem.DTO\\Users\\SessionDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T04:41:52.128Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AutoMapperProfile.cs",
-              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.Utility\\AutoMapperProfile.cs",
-              "RelativeDocumentMoniker": "InnSystem.Utility\\AutoMapperProfile.cs",
-              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.Utility\\AutoMapperProfile.cs",
-              "RelativeToolTip": "InnSystem.Utility\\AutoMapperProfile.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAqwCkAAABYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T04:11:04.944Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "InnDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.DAL\\DBContext\\InnDbContext.cs",
-              "RelativeDocumentMoniker": "InnSystem.DAL\\DBContext\\InnDbContext.cs",
-              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.DAL\\DBContext\\InnDbContext.cs",
-              "RelativeToolTip": "InnSystem.DAL\\DBContext\\InnDbContext.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T21:39:56.597Z",
+              "Title": "InnSystem.IOC",
+              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.IOC\\InnSystem.IOC.csproj",
+              "RelativeDocumentMoniker": "InnSystem.IOC\\InnSystem.IOC.csproj",
+              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.IOC\\InnSystem.IOC.csproj",
+              "RelativeToolTip": "InnSystem.IOC\\InnSystem.IOC.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-14T00:56:03.3Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "ModuleDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.DTO\\Roles\\ModuleDTO.cs",
-              "RelativeDocumentMoniker": "InnSystem.DTO\\Roles\\ModuleDTO.cs",
-              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.DTO\\Roles\\ModuleDTO.cs",
-              "RelativeToolTip": "InnSystem.DTO\\Roles\\ModuleDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Title": "InnDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.DAL\\DBContext\\InnDbContext.cs",
+              "RelativeDocumentMoniker": "InnSystem.DAL\\DBContext\\InnDbContext.cs",
+              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.DAL\\DBContext\\InnDbContext.cs",
+              "RelativeToolTip": "InnSystem.DAL\\DBContext\\InnDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T04:37:41.368Z"
+              "WhenOpened": "2026-04-14T00:50:06.462Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "Module.cs",
-              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.Model\\Module.cs",
-              "RelativeDocumentMoniker": "InnSystem.Model\\Module.cs",
-              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.Model\\Module.cs",
-              "RelativeToolTip": "InnSystem.Model\\Module.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T04:37:58.278Z"
+              "Title": "InnSystem.DAL",
+              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.DAL\\InnSystem.DAL.csproj",
+              "RelativeDocumentMoniker": "InnSystem.DAL\\InnSystem.DAL.csproj",
+              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.DAL\\InnSystem.DAL.csproj",
+              "RelativeToolTip": "InnSystem.DAL\\InnSystem.DAL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-14T00:50:02.221Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.BLL\\Services\\Contract\\IUserService.cs",
-              "RelativeDocumentMoniker": "InnSystem.BLL\\Services\\Contract\\IUserService.cs",
-              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.BLL\\Services\\Contract\\IUserService.cs",
-              "RelativeToolTip": "InnSystem.BLL\\Services\\Contract\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Title": "InnSystem.Model",
+              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.Model\\InnSystem.Model.csproj",
+              "RelativeDocumentMoniker": "InnSystem.Model\\InnSystem.Model.csproj",
+              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.Model\\InnSystem.Model.csproj",
+              "RelativeToolTip": "InnSystem.Model\\InnSystem.Model.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-14T00:50:01.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IRoomService.cs",
+              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.BLL\\Services\\Contract\\IRoomService.cs",
+              "RelativeDocumentMoniker": "InnSystem.BLL\\Services\\Contract\\IRoomService.cs",
+              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.BLL\\Services\\Contract\\IRoomService.cs",
+              "RelativeToolTip": "InnSystem.BLL\\Services\\Contract\\IRoomService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T04:35:09.923Z"
+              "WhenOpened": "2026-04-13T21:54:10.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RoomService.cs",
+              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.BLL\\Services\\RoomService.cs",
+              "RelativeDocumentMoniker": "InnSystem.BLL\\Services\\RoomService.cs",
+              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.BLL\\Services\\RoomService.cs",
+              "RelativeToolTip": "InnSystem.BLL\\Services\\RoomService.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowDMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T21:54:17.248Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "Booking.cs",
-              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.Model\\Booking.cs",
-              "RelativeDocumentMoniker": "InnSystem.Model\\Booking.cs",
-              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.Model\\Booking.cs",
-              "RelativeToolTip": "InnSystem.Model\\Booking.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T02:39:03.739Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ActionLog.cs",
-              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.Model\\ActionLog.cs",
-              "RelativeDocumentMoniker": "InnSystem.Model\\ActionLog.cs",
-              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.Model\\ActionLog.cs",
-              "RelativeToolTip": "InnSystem.Model\\ActionLog.cs",
+              "Title": "Room.cs",
+              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.Model\\Room.cs",
+              "RelativeDocumentMoniker": "InnSystem.Model\\Room.cs",
+              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.Model\\Room.cs",
+              "RelativeToolTip": "InnSystem.Model\\Room.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T02:39:02.837Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "InnSystem.Utility.csproj",
-              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.Utility\\InnSystem.Utility.csproj",
-              "RelativeDocumentMoniker": "InnSystem.Utility\\InnSystem.Utility.csproj",
-              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.Utility\\InnSystem.Utility.csproj",
-              "RelativeToolTip": "InnSystem.Utility\\InnSystem.Utility.csproj",
-              "ViewState": "AgIAABIAAADgKmFsFlQlwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-04-01T02:03:15.311Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "PaymentMethod.cs",
-              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.Model\\PaymentMethod.cs",
-              "RelativeDocumentMoniker": "InnSystem.Model\\PaymentMethod.cs",
-              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.Model\\PaymentMethod.cs",
-              "RelativeToolTip": "InnSystem.Model\\PaymentMethod.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T02:39:00.614Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "InvoiceType.cs",
-              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.Model\\InvoiceType.cs",
-              "RelativeDocumentMoniker": "InnSystem.Model\\InvoiceType.cs",
-              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.Model\\InvoiceType.cs",
-              "RelativeToolTip": "InnSystem.Model\\InvoiceType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T02:38:59.073Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.API\\Program.cs",
-              "RelativeDocumentMoniker": "InnSystem.API\\Program.cs",
-              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.API\\Program.cs",
-              "RelativeToolTip": "InnSystem.API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T03:29:07.647Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.API\\appsettings.json",
-              "RelativeDocumentMoniker": "InnSystem.API\\appsettings.json",
-              "ToolTip": "C:\\Users\\Criis\\source\\repos\\InnSystemAPI\\InnSystem.API\\appsettings.json",
-              "RelativeToolTip": "InnSystem.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-01T03:15:57.022Z"
+              "WhenOpened": "2026-04-13T22:08:55.606Z"
             }
           ]
         }
