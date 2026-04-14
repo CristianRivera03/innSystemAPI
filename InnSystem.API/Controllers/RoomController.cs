@@ -1,4 +1,4 @@
-﻿using InnSystem.API.Utility;
+using InnSystem.API.Utility;
 using InnSystem.BLL.Services;
 using InnSystem.BLL.Services.Contract;
 using InnSystem.DTO.Bookings;
@@ -99,6 +99,29 @@ namespace InnSystem.API.Controllers
         }
 
 
-
+        [HttpGet("available")]
+        public async Task<IActionResult> GetAvailableRooms([FromQuery] DateTime checkIn, [FromQuery] DateTime checkOut, [FromQuery] int guestsCount)
+        {
+            var rsp = new Response<List<RoomDTO>>();
+            try
+            {
+                var availableRooms = await _roomService.GetAvailableRoomsAsync(checkIn, checkOut, guestsCount);
+                rsp.status = true;
+                rsp.value = availableRooms;
+                return Ok(rsp);
+            }
+            catch (ArgumentException ex)
+            {
+                rsp.status = false;
+                rsp.msg = ex.Message;
+                return BadRequest(rsp);
+            }
+            catch (Exception ex)
+            {
+                rsp.status = false;
+                rsp.msg = ex.Message;
+                return StatusCode(StatusCodes.Status500InternalServerError, rsp);
+            }
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using InnSystem.BLL.Services.Contract;
 using InnSystem.DAL.Repositories;
 using InnSystem.DAL.Repositories.Contract;
@@ -170,7 +170,7 @@ namespace InnSystem.BLL.Services
             }
         }
 
-        public Task<List<RoomDTO>> GetAvailableRoomsAsync(DateTime checkIn, DateTime checkOut, int guestsCount)
+        public async Task<List<RoomDTO>> GetAvailableRoomsAsync(DateTime checkIn, DateTime checkOut, int guestsCount)
         {
             try
             {
@@ -179,6 +179,9 @@ namespace InnSystem.BLL.Services
 
                 if (checkIn.Date < DateTime.UtcNow.Date)
                     throw new ArgumentException("No se pueden buscar fechas en el pasado.");
+
+                var checkInDate = DateOnly.FromDateTime(checkIn);
+                var checkOutDate = DateOnly.FromDateTime(checkOut);
 
                 var query = _roomRepository.Query(room =>
                     // Regla A: La habitación debe existir, estar activa y caber la gente
@@ -192,15 +195,18 @@ namespace InnSystem.BLL.Services
                         (booking.Status == "Pending" || booking.Status == "Confirmed") &&
 
                         // Lógica universal de traslape de fechas
-                        booking.CheckIn < checkOut &&
-                        booking.CheckOut > checkIn
+                        booking.CheckIn < checkOutDate &&
+                        booking.CheckOut > checkInDate
                         )
                     );
 
+                var rooms = await query.ToListAsync();
+                return _mapper.Map<List<RoomDTO>>(rooms);
             }
-            catch
+            catch (Exception ex)
             {
-
+                _logger.LogError(ex, "Error getting available rooms");
+                throw;
             }
         }
 
