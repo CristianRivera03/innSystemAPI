@@ -21,7 +21,6 @@ namespace InnSystem.API.Controllers
         }
 
         [HttpGet]
-        [Route("Get")]
         public async Task<IActionResult> Get()
         {
             var rsp = new Response<List<RoomDTO>>();
@@ -40,8 +39,7 @@ namespace InnSystem.API.Controllers
         }
 
 
-        [HttpGet]
-        [Route("{id}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetAsyncById(int id)
         {
             var rsp = new Response<RoomDTO>();
@@ -115,6 +113,108 @@ namespace InnSystem.API.Controllers
                 rsp.status = false;
                 rsp.msg = ex.Message;
                 return BadRequest(rsp);
+            }
+            catch (Exception ex)
+            {
+                rsp.status = false;
+                rsp.msg = ex.Message;
+                return StatusCode(StatusCodes.Status500InternalServerError, rsp);
+            }
+        }
+        [HttpPost]
+        public async Task<IActionResult> CreateAsync([FromBody] RoomCreateDTO model)
+        {
+            var rsp = new Response<RoomDTO>();
+            try
+            {
+                var room = await _roomService.CreateAsync(model);
+                rsp.status = true;
+                rsp.value = room;
+                return Ok(rsp);
+            }
+            catch (TaskCanceledException ex)
+            {
+                rsp.status = false;
+                rsp.msg = ex.Message;
+                return BadRequest(rsp);
+            }
+            catch (Exception ex)
+            {
+                rsp.status = false;
+                rsp.msg = ex.Message;
+                return StatusCode(StatusCodes.Status500InternalServerError, rsp);
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> SoftDeleteAsync(int id)
+        {
+            var rsp = new Response<bool>();
+            try
+            {
+                var success = await _roomService.SoftDelete(id);
+                rsp.status = success;
+                rsp.value = success;
+                if (!success)
+                {
+                    rsp.msg = "Habitacion no encontrada o no se pudo eliminar.";
+                    return NotFound(rsp);
+                }
+                return Ok(rsp);
+            }
+            catch (TaskCanceledException ex)
+            {
+                rsp.status = false;
+                rsp.msg = ex.Message;
+                return BadRequest(rsp);
+            }
+            catch (Exception ex)
+            {
+                rsp.status = false;
+                rsp.msg = ex.Message;
+                return StatusCode(StatusCodes.Status500InternalServerError, rsp);
+            }
+        }
+
+        [HttpDelete("{id}/hard")]
+        public async Task<IActionResult> HardDeleteAsync(int id)
+        {
+            var rsp = new Response<bool>();
+            try
+            {
+                var success = await _roomService.HardDelete(id);
+                rsp.status = success;
+                rsp.value = success;
+                if (!success)
+                {
+                    rsp.msg = "Habitacion no encontrada.";
+                    return NotFound(rsp);
+                }
+                return Ok(rsp);
+            }
+            catch (Exception ex)
+            {
+                rsp.status = false;
+                rsp.msg = ex.Message;
+                return StatusCode(StatusCodes.Status500InternalServerError, rsp);
+            }
+        }
+
+        [HttpPatch("{id}/status")]
+        public async Task<IActionResult> ChangeOperationalStatusAsync(int id, [FromBody] string status)
+        {
+            var rsp = new Response<bool>();
+            try
+            {
+                var success = await _roomService.ChangeOperationalStatusAsync(id, status);
+                rsp.status = success;
+                rsp.value = success;
+                if (!success)
+                {
+                    rsp.msg = "Habitacion no encontrada.";
+                    return NotFound(rsp);
+                }
+                return Ok(rsp);
             }
             catch (Exception ex)
             {

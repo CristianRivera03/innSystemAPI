@@ -4,6 +4,7 @@ namespace InnSystem.DTO.Rooms
 {
     public class RoomDTO
     {
+        public int IdRoom { get; set; }
         public string RoomNumber { get; set; } = null!;
         public string RoomType { get; set; } = null!;
         public string? Description { get; set; }
