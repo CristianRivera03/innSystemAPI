@@ -8,3 +8,7 @@ Accept: application/json
 GET {{InnSystem.API_HostAddress}}/api/booking/Get
 
 ###
+
+GET {{InnSystem.API_HostAddress}}/api/room
+
+###

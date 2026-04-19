@@ -54,9 +54,9 @@ namespace InnSystem.BLL.Services
         {
             try
             {
-                var listRoom = _roomRepository.Query(r => r.DeletedAt == null);
+                var listRoom = await _roomRepository.Query(r => r.DeletedAt == null).ToListAsync();
 
-                return _mapper.Map<List<RoomDTO>>(listRoom.ToListAsync());
+                return _mapper.Map<List<RoomDTO>>(listRoom);
             }
             catch (Exception ex)
             {
