@@ -9,21 +9,21 @@ public partial class Room
 
     public string RoomNumber { get; set; } = null!;
 
-    public string RoomType { get; set; } = null!;
-
     public string? Description { get; set; }
-
-    public decimal BasePrice { get; set; }
-
-    public int GuestCapacity { get; set; }
-
-    public string? OperationalStatus { get; set; }
 
     public DateTime? CreatedAt { get; set; }
 
     public DateTime? DeletedAt { get; set; }
 
+    public int? IdRoomType { get; set; }
+
+    public int IdStatus { get; set; }
+
     public virtual ICollection<Booking> Bookings { get; set; } = new List<Booking>();
+
+    public virtual RoomType? IdRoomTypeNavigation { get; set; }
+
+    public virtual RoomStatus IdStatusNavigation { get; set; } = null!;
 
     public virtual ICollection<RoomImage> RoomImages { get; set; } = new List<RoomImage>();
 

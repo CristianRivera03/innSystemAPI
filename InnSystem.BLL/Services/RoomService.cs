@@ -16,7 +16,6 @@ namespace InnSystem.BLL.Services
 {
     public class RoomService : IRoomService
     {
-        private readonly IGenericRepository<Booking> _bookingRepository;
         private readonly IGenericRepository<Room> _roomRepository;
         private readonly IMapper _mapper;
         private readonly ILogger<RoomService> _logger;
@@ -41,7 +40,12 @@ namespace InnSystem.BLL.Services
                 if (roomCreated.IdRoom == 0)
                     throw new TaskCanceledException("The room cannot be created");
 
-                return _mapper.Map<RoomDTO>(roomCreated);
+                var createdWithNav = await _roomRepository.Query(r => r.IdRoom == roomCreated.IdRoom)
+                    .Include(r => r.IdRoomTypeNavigation)
+                    .Include(r => r.IdStatusNavigation)
+                    .FirstOrDefaultAsync();
+
+                return _mapper.Map<RoomDTO>(createdWithNav);
 
             }catch(Exception ex)
             {
@@ -54,7 +58,10 @@ namespace InnSystem.BLL.Services
         {
             try
             {
-                var listRoom = await _roomRepository.Query(r => r.DeletedAt == null).ToListAsync();
+                var listRoom = await _roomRepository.Query(r => r.DeletedAt == null)
+                    .Include(r => r.IdRoomTypeNavigation)
+                    .Include(r => r.IdStatusNavigation)
+                    .ToListAsync();
 
                 return _mapper.Map<List<RoomDTO>>(listRoom);
             }
@@ -70,7 +77,10 @@ namespace InnSystem.BLL.Services
             try
             {
 
-                var room = await _roomRepository.Get(r => r.IdRoom == id && r.DeletedAt == null);
+                var room = await _roomRepository.Query(r => r.IdRoom == id && r.DeletedAt == null)
+                    .Include(r => r.IdRoomTypeNavigation)
+                    .Include(r => r.IdStatusNavigation)
+                    .FirstOrDefaultAsync();
 
                 if (room == null)
                     return null; 
@@ -116,7 +126,7 @@ namespace InnSystem.BLL.Services
                 if (room == null)
                     throw new TaskCanceledException("La habitacion no existe");
 
-                room.OperationalStatus = "Inactive";
+                room.IdStatus = 3; // 3 = Inactive
                 room.DeletedAt = DateTime.UtcNow;
 
                 bool response = await _roomRepository.SoftDelete(room);
@@ -151,7 +161,7 @@ namespace InnSystem.BLL.Services
             }
         }
 
-        public async Task<bool> ChangeOperationalStatusAsync(int id, string status)
+        public async Task<bool> ChangeOperationalStatusAsync(int id, int statusId)
         {
             try
             {
@@ -159,7 +169,7 @@ namespace InnSystem.BLL.Services
 
                 if (room == null) return false;
 
-                room.OperationalStatus = status; 
+                room.IdStatus = statusId; 
                 return await _roomRepository.Update(room);
 
             }
@@ -186,19 +196,21 @@ namespace InnSystem.BLL.Services
                 var query = _roomRepository.Query(room =>
                     // Regla A: La habitación debe existir, estar activa y caber la gente
                     room.DeletedAt == null &&
-                    room.OperationalStatus == "Active" &&
-                    room.GuestCapacity >= guestsCount &&
+                    room.IdStatus == 1 && // Active
+                    room.IdRoomTypeNavigation != null && room.IdRoomTypeNavigation.GuestCapacity >= guestsCount &&
 
                     // Regla B: Anti-Overbooking (Que NO tenga reservas cruzadas)
                     !room.Bookings.Any(booking =>
                         booking.DeletedAt == null &&
-                        (booking.Status == "Pending" || booking.Status == "Confirmed") &&
+                        (booking.IdStatus == 1 || booking.IdStatus == 2) &&
 
                         // Lógica universal de traslape de fechas
                         booking.CheckIn < checkOutDate &&
                         booking.CheckOut > checkInDate
                         )
-                    );
+                    )
+                    .Include(r => r.IdRoomTypeNavigation)
+                    .Include(r => r.IdStatusNavigation);
 
                 var rooms = await query.ToListAsync();
                 return _mapper.Map<List<RoomDTO>>(rooms);

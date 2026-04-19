@@ -42,6 +42,7 @@ namespace InnSystem.IOC
             services.AddScoped<IRoomService, RoomService>();
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ICatalogService, CatalogService>();
 
         }
     }

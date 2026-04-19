@@ -19,8 +19,6 @@ public partial class Booking
 
     public decimal TotalCost { get; set; }
 
-    public string? Status { get; set; }
-
     public string? CancelReason { get; set; }
 
     public DateTime? CreatedAt { get; set; }
@@ -29,7 +27,11 @@ public partial class Booking
 
     public DateTime? DeletedAt { get; set; }
 
+    public int IdStatus { get; set; }
+
     public virtual Room IdRoomNavigation { get; set; } = null!;
+
+    public virtual BookingStatus IdStatusNavigation { get; set; } = null!;
 
     public virtual User IdUserNavigation { get; set; } = null!;
 

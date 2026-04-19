@@ -21,6 +21,8 @@ public partial class InnDbContext : DbContext
 
     public virtual DbSet<Booking> Bookings { get; set; }
 
+    public virtual DbSet<BookingStatus> BookingStatuses { get; set; }
+
     public virtual DbSet<InvoiceType> InvoiceTypes { get; set; }
 
     public virtual DbSet<Module> Modules { get; set; }
@@ -36,6 +38,10 @@ public partial class InnDbContext : DbContext
     public virtual DbSet<Room> Rooms { get; set; }
 
     public virtual DbSet<RoomImage> RoomImages { get; set; }
+
+    public virtual DbSet<RoomStatus> RoomStatuses { get; set; }
+
+    public virtual DbSet<RoomType> RoomTypes { get; set; }
 
     public virtual DbSet<Season> Seasons { get; set; }
 
@@ -102,11 +108,10 @@ public partial class InnDbContext : DbContext
             entity.Property(e => e.DeletedAt).HasColumnName("deleted_at");
             entity.Property(e => e.GuestsCount).HasColumnName("guests_count");
             entity.Property(e => e.IdRoom).HasColumnName("id_room");
+            entity.Property(e => e.IdStatus)
+                .HasDefaultValue(1)
+                .HasColumnName("id_status");
             entity.Property(e => e.IdUser).HasColumnName("id_user");
-            entity.Property(e => e.Status)
-                .HasMaxLength(30)
-                .HasDefaultValueSql("'Pending'::character varying")
-                .HasColumnName("status");
             entity.Property(e => e.TotalCost)
                 .HasPrecision(10, 2)
                 .HasColumnName("total_cost");
@@ -119,9 +124,28 @@ public partial class InnDbContext : DbContext
                 .OnDelete(DeleteBehavior.Restrict)
                 .HasConstraintName("bookings_id_room_fkey");
 
+            entity.HasOne(d => d.IdStatusNavigation).WithMany(p => p.Bookings)
+                .HasForeignKey(d => d.IdStatus)
+                .OnDelete(DeleteBehavior.Restrict)
+                .HasConstraintName("bookings_status_fkey");
+
             entity.HasOne(d => d.IdUserNavigation).WithMany(p => p.Bookings)
                 .HasForeignKey(d => d.IdUser)
                 .HasConstraintName("bookings_id_user_fkey");
+        });
+
+        modelBuilder.Entity<BookingStatus>(entity =>
+        {
+            entity.HasKey(e => e.IdStatus).HasName("booking_statuses_pkey");
+
+            entity.ToTable("booking_statuses");
+
+            entity.HasIndex(e => e.Name, "booking_statuses_name_key").IsUnique();
+
+            entity.Property(e => e.IdStatus).HasColumnName("id_status");
+            entity.Property(e => e.Name)
+                .HasMaxLength(50)
+                .HasColumnName("name");
         });
 
         modelBuilder.Entity<InvoiceType>(entity =>
@@ -266,25 +290,28 @@ public partial class InnDbContext : DbContext
             entity.HasIndex(e => e.RoomNumber, "rooms_room_number_key").IsUnique();
 
             entity.Property(e => e.IdRoom).HasColumnName("id_room");
-            entity.Property(e => e.BasePrice)
-                .HasPrecision(10, 2)
-                .HasColumnName("base_price");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("CURRENT_TIMESTAMP")
                 .HasColumnName("created_at");
             entity.Property(e => e.DeletedAt).HasColumnName("deleted_at");
             entity.Property(e => e.Description).HasColumnName("description");
-            entity.Property(e => e.GuestCapacity).HasColumnName("guest_capacity");
-            entity.Property(e => e.OperationalStatus)
-                .HasMaxLength(20)
-                .HasDefaultValueSql("'Active'::character varying")
-                .HasColumnName("operational_status");
+            entity.Property(e => e.IdRoomType).HasColumnName("id_room_type");
+            entity.Property(e => e.IdStatus)
+                .HasDefaultValue(1)
+                .HasColumnName("id_status");
             entity.Property(e => e.RoomNumber)
                 .HasMaxLength(20)
                 .HasColumnName("room_number");
-            entity.Property(e => e.RoomType)
-                .HasMaxLength(50)
-                .HasColumnName("room_type");
+
+            entity.HasOne(d => d.IdRoomTypeNavigation).WithMany(p => p.Rooms)
+                .HasForeignKey(d => d.IdRoomType)
+                .OnDelete(DeleteBehavior.Restrict)
+                .HasConstraintName("rooms_id_room_type_fkey");
+
+            entity.HasOne(d => d.IdStatusNavigation).WithMany(p => p.Rooms)
+                .HasForeignKey(d => d.IdStatus)
+                .OnDelete(DeleteBehavior.Restrict)
+                .HasConstraintName("rooms_status_fkey");
 
             entity.HasMany(d => d.IdServices).WithMany(p => p.IdRooms)
                 .UsingEntity<Dictionary<string, object>>(
@@ -318,6 +345,39 @@ public partial class InnDbContext : DbContext
             entity.HasOne(d => d.IdRoomNavigation).WithMany(p => p.RoomImages)
                 .HasForeignKey(d => d.IdRoom)
                 .HasConstraintName("room_images_id_room_fkey");
+        });
+
+        modelBuilder.Entity<RoomStatus>(entity =>
+        {
+            entity.HasKey(e => e.IdStatus).HasName("room_statuses_pkey");
+
+            entity.ToTable("room_statuses");
+
+            entity.HasIndex(e => e.Name, "room_statuses_name_key").IsUnique();
+
+            entity.Property(e => e.IdStatus).HasColumnName("id_status");
+            entity.Property(e => e.Name)
+                .HasMaxLength(50)
+                .HasColumnName("name");
+        });
+
+        modelBuilder.Entity<RoomType>(entity =>
+        {
+            entity.HasKey(e => e.IdRoomType).HasName("room_types_pkey");
+
+            entity.ToTable("room_types");
+
+            entity.HasIndex(e => e.Name, "room_types_name_key").IsUnique();
+
+            entity.Property(e => e.IdRoomType).HasColumnName("id_room_type");
+            entity.Property(e => e.BasePrice)
+                .HasPrecision(10, 2)
+                .HasColumnName("base_price");
+            entity.Property(e => e.Description).HasColumnName("description");
+            entity.Property(e => e.GuestCapacity).HasColumnName("guest_capacity");
+            entity.Property(e => e.Name)
+                .HasMaxLength(50)
+                .HasColumnName("name");
         });
 
         modelBuilder.Entity<Season>(entity =>

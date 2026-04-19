@@ -201,12 +201,12 @@ namespace InnSystem.API.Controllers
         }
 
         [HttpPatch("{id}/status")]
-        public async Task<IActionResult> ChangeOperationalStatusAsync(int id, [FromBody] string status)
+        public async Task<IActionResult> ChangeOperationalStatusAsync(int id, [FromBody] int statusId)
         {
             var rsp = new Response<bool>();
             try
             {
-                var success = await _roomService.ChangeOperationalStatusAsync(id, status);
+                var success = await _roomService.ChangeOperationalStatusAsync(id, statusId);
                 rsp.status = success;
                 rsp.value = success;
                 if (!success)

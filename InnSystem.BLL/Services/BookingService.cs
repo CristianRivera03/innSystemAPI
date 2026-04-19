@@ -29,34 +29,113 @@ namespace InnSystem.BLL.Services
         {
             try
             {
-                var queryBooking = _bookingRepository.Query();
-                var listBooking = await queryBooking.Include(b => b.IdUserNavigation).ToListAsync();
+                var queryBooking = _bookingRepository.Query(b => b.DeletedAt == null);
+                var listBooking = await queryBooking
+                    .Include(b => b.IdUserNavigation)
+                    .Include(b => b.IdStatusNavigation)
+                    .ToListAsync();
 
                 return _mapper.Map<List<BookingDTO>>(listBooking);
-            }catch(Exception ex)
+            }
+            catch(Exception ex)
             {
                 _logger.LogError(ex, "Error getting the bookings");
                 throw;
             }
         }
 
-        public Task<BookingCreateDTO> Create(BookingCreateDTO model)
+        public async Task<BookingDTO?> GetByIdAsync(Guid id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var booking = await _bookingRepository.Query(b => b.IdBooking == id && b.DeletedAt == null)
+                    .Include(b => b.IdUserNavigation)
+                    .Include(b => b.IdStatusNavigation)
+                    .FirstOrDefaultAsync();
+
+                return booking == null ? null : _mapper.Map<BookingDTO>(booking);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error getting booking {Id}", id);
+                throw;
+            }
         }
 
-
-        public Task<bool> HardDelete(Guid id)
+        public async Task<BookingDTO> Create(BookingCreateDTO model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                // To support the SP validation (fn_create_booking), you would call raw SQL here.
+                // Fallback to basic EF logic:
+                var booking = _mapper.Map<Booking>(model);
+                booking.IdStatus = 1; // Pending
+                booking.CreatedAt = DateTime.UtcNow;
+
+                var result = await _bookingRepository.Create(booking);
+                return _mapper.Map<BookingDTO>(result);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error creating booking");
+                throw;
+            }
         }
 
-        public Task<bool> SoftDelete(Guid id)
+        public async Task<bool> HardDelete(Guid id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var booking = await _bookingRepository.GetById(id);
+                if (booking == null) return false;
+                
+                return await _bookingRepository.HardDelete(booking);
+            }
+            catch(Exception ex)
+            {
+                _logger.LogError(ex, "Error hard deleting booking {Id}", id);
+                throw;
+            }
         }
 
-        public Task<bool> Update(BookingDTO model)
+        public async Task<bool> SoftDelete(Guid id)
+        {
+            try
+            {
+                var booking = await _bookingRepository.GetById(id);
+                if (booking == null) return false;
+                
+                // Usually Cancellation logic goes here, setting status to 3 or 4 (Cancelled)
+                booking.IdStatus = 4; // Assuming 4 is Cancelled/Inactiva
+                booking.DeletedAt = DateTime.UtcNow;
+                
+                return await _bookingRepository.SoftDelete(booking);
+            }
+            catch(Exception ex)
+            {
+                _logger.LogError(ex, "Error soft deleting booking {Id}", id);
+                throw;
+            }
+        }
+
+        public async Task<bool> ChangeStatusAsync(Guid id, int statusId)
+        {
+            try
+            {
+                var booking = await _bookingRepository.GetById(id);
+                if (booking == null) return false;
+
+                booking.IdStatus = statusId;
+                return await _bookingRepository.Update(booking);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error changing status for booking {Id}", id);
+                throw;
+            }
+        }
+
+        public async Task<bool> Update(Guid id, BookingDTO model)
         {
             throw new NotImplementedException();
         }

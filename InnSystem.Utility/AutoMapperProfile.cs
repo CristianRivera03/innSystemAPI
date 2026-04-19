@@ -9,6 +9,7 @@ using InnSystem.DTO.Rooms;
 using InnSystem.DTO.Bookings;
 using InnSystem.DTO.Payments;
 using InnSystem.DTO.Roles;
+using InnSystem.DTO.Catalogs;
 
 namespace InnSystem.Utility
 {
@@ -44,7 +45,12 @@ namespace InnSystem.Utility
             #endregion Users
 
             #region Rooms
-            CreateMap<Room, RoomDTO>().ReverseMap();
+            CreateMap<Room, RoomDTO>()
+                .ForMember(destino => destino.RoomType, opt => opt.MapFrom(origen => origen.IdRoomTypeNavigation != null ? origen.IdRoomTypeNavigation.Name : null))
+                .ForMember(destino => destino.BasePrice, opt => opt.MapFrom(origen => origen.IdRoomTypeNavigation != null ? origen.IdRoomTypeNavigation.BasePrice : 0))
+                .ForMember(destino => destino.GuestCapacity, opt => opt.MapFrom(origen => origen.IdRoomTypeNavigation != null ? origen.IdRoomTypeNavigation.GuestCapacity : 0))
+                .ForMember(destino => destino.OperationalStatus, opt => opt.MapFrom(origen => origen.IdStatusNavigation.Name));
+
             CreateMap<RoomCreateDTO, Room>();
             CreateMap<RoomUpdateDTO, Room>();
             #endregion Rooms
@@ -55,7 +61,8 @@ namespace InnSystem.Utility
                 .ForMember(destino => destino.LastName,  opt => opt.MapFrom(origen => origen.IdUserNavigation.LastName))
                 .ForMember(destino => destino.Email,     opt => opt.MapFrom(origen => origen.IdUserNavigation.Email))
                 .ForMember(destino => destino.Phone,     opt => opt.MapFrom(origen => origen.IdUserNavigation.Phone))
-                .ForMember(destino => destino.DocumentId,opt => opt.MapFrom(origen => origen.IdUserNavigation.DocumentId));
+                .ForMember(destino => destino.DocumentId,opt => opt.MapFrom(origen => origen.IdUserNavigation.DocumentId))
+                .ForMember(destino => destino.Status,    opt => opt.MapFrom(origen => origen.IdStatusNavigation.Name));
 
             CreateMap<BookingCreateDTO, Booking>();
             #endregion Bookings
@@ -64,6 +71,26 @@ namespace InnSystem.Utility
             CreateMap<Payment, PaymentDTO>().ReverseMap();
             CreateMap<PaymentCreateDTO, Payment>();
             #endregion Payments
+
+            #region Catalogs
+            CreateMap<RoomType, RoomTypeDTO>().ReverseMap();
+            
+            CreateMap<RoomStatus, StatusDTO>()
+                .ForMember(destino => destino.Id, opt => opt.MapFrom(origen => origen.IdStatus))
+                .ReverseMap()
+                .ForMember(destino => destino.IdStatus, opt => opt.MapFrom(origen => origen.Id));
+                
+            CreateMap<BookingStatus, StatusDTO>()
+                .ForMember(destino => destino.Id, opt => opt.MapFrom(origen => origen.IdStatus))
+                .ReverseMap()
+                .ForMember(destino => destino.IdStatus, opt => opt.MapFrom(origen => origen.Id));
+                
+            CreateMap<PaymentStatus, StatusDTO>()
+                .ForMember(destino => destino.Id, opt => opt.MapFrom(origen => origen.IdStatus))
+                .ReverseMap()
+                .ForMember(destino => destino.IdStatus, opt => opt.MapFrom(origen => origen.Id));
+
+            #endregion Catalogs
         }
     }
 }

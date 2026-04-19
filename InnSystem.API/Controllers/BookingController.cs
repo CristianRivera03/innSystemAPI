@@ -1,4 +1,4 @@
-﻿using InnSystem.API.Utility;
+using InnSystem.API.Utility;
 using InnSystem.BLL.Services.Contract;
 using InnSystem.DAL.Repositories.Contract;
 using InnSystem.DTO.Bookings;
@@ -33,6 +33,50 @@ namespace InnSystem.API.Controllers
             {
                 rsp.status = false;
                 rsp.msg = ex.Message;
+            }
+            return Ok(rsp);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(Guid id)
+        {
+            var rsp = new Response<BookingDTO>();
+            try
+            {
+                var booking = await _bookingService.GetByIdAsync(id);
+                if (booking == null)
+                {
+                    rsp.status = false;
+                    rsp.msg = "Booking no encontrada";
+                    return NotFound(rsp);
+                }
+                rsp.status = true;
+                rsp.value = booking;
+            }
+            catch (Exception ex)
+            {
+                rsp.status = false;
+                rsp.msg = ex.Message;
+                return StatusCode(500, rsp);
+            }
+            return Ok(rsp);
+        }
+
+        [HttpPatch("{id}/status")]
+        public async Task<IActionResult> ChangeStatus(Guid id, [FromBody] int statusId)
+        {
+            var rsp = new Response<bool>();
+            try
+            {
+                rsp.status = await _bookingService.ChangeStatusAsync(id, statusId);
+                rsp.value = rsp.status;
+                if (!rsp.status) return NotFound(rsp);
+            }
+            catch (Exception ex)
+            {
+                rsp.status = false;
+                rsp.msg = ex.Message;
+                return StatusCode(500, rsp);
             }
             return Ok(rsp);
         }

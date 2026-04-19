@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -18,7 +18,7 @@ namespace InnSystem.BLL.Services.Contract
         Task<bool> HardDelete(int id);
 
         Task<List<RoomDTO>> GetAvailableRoomsAsync(DateTime checkIn, DateTime checkOut, int guestsCount);
-        Task<bool> ChangeOperationalStatusAsync(int id, string status);
+        Task<bool> ChangeOperationalStatusAsync(int id, int statusId);
 
     }
 }

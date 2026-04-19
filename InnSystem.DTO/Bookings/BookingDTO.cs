@@ -16,6 +16,7 @@ namespace InnSystem.DTO.Bookings
         public DateOnly CheckOut { get; set; }
         public int GuestsCount { get; set; }
         public decimal TotalCost { get; set; }
+        public int IdStatus { get; set; }
         public string? Status { get; set; }
         public string? CancelReason { get; set; }
     }
