@@ -14,11 +14,11 @@ namespace InnSystem.BLL.Services
     public class BookingService : IBookingService
     {
 
-        private readonly IGenericRepository<Booking> _bookingRepository;
+        private readonly IBookingRepository _bookingRepository;
         private readonly IMapper _mapper;
         private readonly ILogger<BookingService> _logger;
 
-        public BookingService(IGenericRepository<Booking> bookingRepository, IMapper mapper, ILogger<BookingService> logger)
+        public BookingService(IBookingRepository bookingRepository, IMapper mapper, ILogger<BookingService> logger)
         {
             _bookingRepository = bookingRepository;
             _mapper = mapper;
@@ -66,18 +66,29 @@ namespace InnSystem.BLL.Services
         {
             try
             {
-                // To support the SP validation (fn_create_booking), you would call raw SQL here.
-                // Fallback to basic EF logic:
-                var booking = _mapper.Map<Booking>(model);
-                booking.IdStatus = 1; // Pending
-                booking.CreatedAt = DateTime.UtcNow;
 
-                var result = await _bookingRepository.Create(booking);
-                return _mapper.Map<BookingDTO>(result);
+                var checkInUtc = DateTime.SpecifyKind(model.CheckIn, DateTimeKind.Utc);
+                var checkOutUtc = DateTime.SpecifyKind(model.CheckOut, DateTimeKind.Utc);
+
+                var newBookingId = await _bookingRepository.CreateBookingAsync(
+                    model.IdUser,
+                    model.IdRoom,
+                    checkInUtc,
+                    checkOutUtc,
+                    model.GuestsCount
+                );
+
+                // El SP devuelve el Guid de la nueva reserva; recuperamos el DTO completo.
+                var bookingDto = await GetByIdAsync(newBookingId);
+
+                if (bookingDto == null)
+                    throw new Exception("La reserva fue creada pero no se pudo recuperar.");
+
+                return bookingDto;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error creating booking");
+                _logger.LogError(ex, "Error al crear la reserva mediante el stored procedure");
                 throw;
             }
         }

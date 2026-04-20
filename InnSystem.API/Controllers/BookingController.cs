@@ -62,6 +62,34 @@ namespace InnSystem.API.Controllers
             return Ok(rsp);
         }
 
+        [HttpPost]
+        [Route("Create")]
+        public async Task<IActionResult> Create([FromBody] BookingCreateDTO request)
+        {
+            var rsp = new Response<BookingDTO>();
+            try
+            {
+                if (request == null)
+                {
+                    rsp.status = false;
+                    rsp.msg = "Datos inválidos.";
+                    return BadRequest(rsp);
+                }
+
+                var booking = await _bookingService.Create(request);
+                rsp.status = true;
+                rsp.value = booking;
+                return Ok(rsp);
+            }
+            catch (Exception ex)
+            {
+                rsp.status = false;
+                // El SP lanza una excepción descriptiva si la habitación no está disponible
+                rsp.msg = ex.Message;
+                return StatusCode(500, rsp);
+            }
+        }
+
         [HttpPatch("{id}/status")]
         public async Task<IActionResult> ChangeStatus(Guid id, [FromBody] int statusId)
         {

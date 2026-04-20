@@ -1,4 +1,4 @@
-﻿using InnSystem.DTO.Users;
+using InnSystem.DTO.Users;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,7 +12,7 @@ namespace InnSystem.BLL.Services.Contract
         Task<UserDTO> Create(UserCreateDTO model);
         Task<bool> Update(UserDTO model);
         Task<bool> Delete(Guid id);
-        Task<bool> ChangeUserRole (UserChangeRoleDTO request);
-        Task<bool> UpdateUser(UserUpdateDTO request);
+        Task<bool> ChangeUserRole(UserChangeRoleDTO request);
+        Task<bool> UpdateUser(Guid idUser, UserUpdateDTO request);
     }
 }

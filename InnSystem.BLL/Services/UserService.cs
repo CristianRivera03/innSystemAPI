@@ -26,6 +26,23 @@ namespace InnSystem.BLL.Services
             _logger = logger;
         }
 
+        //Listar usuarios
+        public async Task<List<UserDTO>> GetAllAsync()
+        {
+            try
+            {
+                var listUsers = await _userRepository.Query(r => r.DeletedAt == null).ToListAsync();
+
+                return _mapper.Map<List<UserDTO>>(listUsers);
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al obtener los usuarios");
+                throw;
+            }
+        }
+
         //Creacion de usuarios
         public async Task<UserDTO> Create(UserCreateDTO model)
         {
@@ -90,10 +107,6 @@ namespace InnSystem.BLL.Services
             throw new NotImplementedException();
         }
 
-        public Task<List<UserDTO>> GetAllAsync()
-        {
-            throw new NotImplementedException();
-        }
 
 
         public Task<bool> Update(UserDTO model)
@@ -101,9 +114,34 @@ namespace InnSystem.BLL.Services
             throw new NotImplementedException();
         }
 
-        public Task<bool> UpdateUser(UserUpdateDTO request)
+        public async Task<bool> UpdateUser(Guid idUser, UserUpdateDTO request)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var userFound = await _userRepository.Query(u => u.IdUser == idUser).FirstOrDefaultAsync();
+
+                if (userFound == null)
+                    throw new TaskCanceledException("El usuario no existe");
+
+                userFound.IdRole = request.IdRole;
+                userFound.FirstName = request.FirstName;
+                userFound.LastName = request.LastName;
+                userFound.Phone = request.Phone;
+                userFound.DocumentId = request.DocumentId;
+                userFound.IsActive = request.IsActive;
+
+                bool response = await _userRepository.Update(userFound);
+
+                if (!response)
+                    throw new TaskCanceledException("No se pudo editar el usuario");
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error updating user");
+                throw;
+            }
         }
     }
 }

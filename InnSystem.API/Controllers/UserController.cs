@@ -1,5 +1,7 @@
 using InnSystem.API.Utility;
+using InnSystem.BLL.Services;
 using InnSystem.BLL.Services.Contract;
+using InnSystem.DTO.Rooms;
 using InnSystem.DTO.Users;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -18,6 +20,26 @@ namespace InnSystem.API.Controllers
         {
             _userService = userService;
         }
+
+
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            var rsp = new Response<List<UserDTO>>();
+            try
+            {
+                rsp.status = true;
+                rsp.value = await _userService.GetAllAsync();
+
+            }
+            catch (Exception ex)
+            {
+                rsp.status = false;
+                rsp.msg = ex.Message;
+            }
+            return Ok(rsp);
+        }
+
 
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDTO model)
@@ -53,6 +75,29 @@ namespace InnSystem.API.Controllers
                 var user = await _userService.Create(model);
                 rsp.status = true;
                 rsp.value = user;
+                return Ok(rsp);
+            }
+            catch (TaskCanceledException ex)
+            {
+                rsp.status = false;
+                rsp.msg = ex.Message;
+                return BadRequest(rsp);
+            }
+            catch (Exception ex)
+            {
+                rsp.status = false;
+                rsp.msg = ex.Message;
+                return StatusCode(StatusCodes.Status500InternalServerError, rsp);
+            }
+        }
+        [HttpPut("Update/{idUser}")]
+        public async Task<IActionResult> UpdateUser(Guid idUser, [FromBody] UserUpdateDTO model)
+        {
+            var rsp = new Response<bool>();
+            try
+            {
+                rsp.status = true;
+                rsp.value = await _userService.UpdateUser(idUser, model);
                 return Ok(rsp);
             }
             catch (TaskCanceledException ex)

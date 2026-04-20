@@ -19,9 +19,9 @@ namespace InnSystem.DAL.Repositories
 
         public async Task<Guid> CreateBookingAsync(Guid userId, int roomId, DateTime checkIn, DateTime checkOut, int guestsCount)
         {
-            var query = "SELECT fn_create_booking({0}, {1}, {2}, {3}, {4}) AS Value";
-            
-            // Asumiendo EF Core 7+, usamos SqlQueryRaw para obtener resultados escalares
+            // Agregamos las comillas dobles escapadas al alias: AS \"Value\"
+            var query = "SELECT fn_create_booking({0}, {1}, {2}::date, {3}::date, {4}) AS \"Value\"";
+
             var result = await _dbContext.Database
                 .SqlQueryRaw<Guid>(query, userId, roomId, checkIn, checkOut, guestsCount)
                 .FirstOrDefaultAsync();
