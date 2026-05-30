@@ -5,6 +5,7 @@ using InnSystem.DAL.Repositories.Contract;
 using InnSystem.DTO.Bookings;
 using InnSystem.DTO.Rooms;
 using InnSystem.Model;
+using InnSystem.Utility.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
@@ -17,14 +18,26 @@ namespace InnSystem.BLL.Services
     public class RoomService : IRoomService
     {
         private readonly IGenericRepository<Room> _roomRepository;
+        private readonly IGenericRepository<Service> _serviceRepository;
+        private readonly IGenericRepository<RoomImage> _roomImageRepository;
         private readonly IMapper _mapper;
         private readonly ILogger<RoomService> _logger;
+        private readonly ICloudinaryUtility _cloudinaryUtility;
 
-        public RoomService(IGenericRepository<Room> roomRepository, IMapper mapper, ILogger<RoomService> logger)
+        public RoomService(
+            IGenericRepository<Room> roomRepository,
+            IGenericRepository<Service> serviceRepository,
+            IGenericRepository<RoomImage> roomImageRepository,
+            IMapper mapper, 
+            ILogger<RoomService> logger,
+            ICloudinaryUtility cloudinaryUtility)
         {
             _roomRepository = roomRepository;
+            _serviceRepository = serviceRepository;
+            _roomImageRepository = roomImageRepository;
             _mapper = mapper;
             _logger = logger;
+            _cloudinaryUtility = cloudinaryUtility;
         }
 
         public async Task<RoomDTO> CreateAsync(RoomCreateDTO model)
@@ -35,14 +48,46 @@ namespace InnSystem.BLL.Services
 
                 roomToCreate.CreatedAt = DateTime.UtcNow;
 
+                if (model.ServiceIds != null && model.ServiceIds.Any())
+                {
+                    foreach (var serviceId in model.ServiceIds)
+                    {
+                        var service = await _serviceRepository.Get(s => s.IdService == serviceId);
+                        if (service != null)
+                        {
+                            roomToCreate.IdServices.Add(service);
+                        }
+                    }
+                }
+
                 var roomCreated = await _roomRepository.Create(roomToCreate);
 
                 if (roomCreated.IdRoom == 0)
                     throw new TaskCanceledException("The room cannot be created");
 
+                if (model.Photographs != null && model.Photographs.Any())
+                {
+                    foreach (var photo in model.Photographs)
+                    {
+                        var url = await _cloudinaryUtility.SubirImagenAsync(photo, "rooms");
+                        if (!string.IsNullOrEmpty(url))
+                        {
+                            var roomImage = new RoomImage
+                            {
+                                IdRoom = roomCreated.IdRoom,
+                                Url = url,
+                                Description = "Room image"
+                            };
+                            await _roomImageRepository.Create(roomImage);
+                        }
+                    }
+                }
+
                 var createdWithNav = await _roomRepository.Query(r => r.IdRoom == roomCreated.IdRoom)
                     .Include(r => r.IdRoomTypeNavigation)
                     .Include(r => r.IdStatusNavigation)
+                    .Include(r => r.IdServices)
+                    .Include(r => r.RoomImages)
                     .FirstOrDefaultAsync();
 
                 return _mapper.Map<RoomDTO>(createdWithNav);
@@ -61,6 +106,8 @@ namespace InnSystem.BLL.Services
                 var listRoom = await _roomRepository.Query(r => r.DeletedAt == null)
                     .Include(r => r.IdRoomTypeNavigation)
                     .Include(r => r.IdStatusNavigation)
+                    .Include(r => r.IdServices)
+                    .Include(r => r.RoomImages)
                     .ToListAsync();
 
                 return _mapper.Map<List<RoomDTO>>(listRoom);
@@ -80,6 +127,8 @@ namespace InnSystem.BLL.Services
                 var room = await _roomRepository.Query(r => r.IdRoom == id && r.DeletedAt == null)
                     .Include(r => r.IdRoomTypeNavigation)
                     .Include(r => r.IdStatusNavigation)
+                    .Include(r => r.IdServices)
+                    .Include(r => r.RoomImages)
                     .FirstOrDefaultAsync();
 
                 if (room == null)
@@ -99,12 +148,65 @@ namespace InnSystem.BLL.Services
         {
             try
             {
-                var existingRoom = await _roomRepository.Get(r => r.IdRoom == id && r.DeletedAt == null);
+                var existingRoom = await _roomRepository.Query(r => r.IdRoom == id && r.DeletedAt == null)
+                    .Include(r => r.IdServices)
+                    .Include(r => r.RoomImages)
+                    .FirstOrDefaultAsync();
 
                 if (existingRoom == null)
                     return false;
 
                 _mapper.Map(model, existingRoom);
+
+                // Update services
+                if (model.ServiceIds != null)
+                {
+                    existingRoom.IdServices.Clear();
+                    foreach (var serviceId in model.ServiceIds)
+                    {
+                        var service = await _serviceRepository.Get(s => s.IdService == serviceId);
+                        if (service != null)
+                        {
+                            existingRoom.IdServices.Add(service);
+                        }
+                    }
+                }
+
+                // Delete requested images
+                if (model.DeletedPhotographIds != null && model.DeletedPhotographIds.Any())
+                {
+                    foreach (var imageId in model.DeletedPhotographIds)
+                    {
+                        var imageToDelete = existingRoom.RoomImages.FirstOrDefault(i => i.IdImage == imageId);
+                        if (imageToDelete != null)
+                        {
+                            // In a real scenario, you might extract the publicId from the URL to delete from Cloudinary
+                            // await _cloudinaryUtility.EliminarImagenAsync(publicId);
+                            await _roomImageRepository.RemoveRange(new[] { imageToDelete });
+                            existingRoom.RoomImages.Remove(imageToDelete);
+                        }
+                    }
+                }
+
+                // Add new images
+                if (model.Photographs != null && model.Photographs.Any())
+                {
+                    foreach (var photo in model.Photographs)
+                    {
+                        var url = await _cloudinaryUtility.SubirImagenAsync(photo, "rooms");
+                        if (!string.IsNullOrEmpty(url))
+                        {
+                            var roomImage = new RoomImage
+                            {
+                                IdRoom = existingRoom.IdRoom,
+                                Url = url,
+                                Description = "Room image"
+                            };
+                            await _roomImageRepository.Create(roomImage);
+                            existingRoom.RoomImages.Add(roomImage);
+                        }
+                    }
+                }
 
                 return await _roomRepository.Update(existingRoom);
             }

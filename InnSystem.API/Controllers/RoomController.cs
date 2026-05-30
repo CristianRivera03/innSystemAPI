@@ -69,7 +69,7 @@ namespace InnSystem.API.Controllers
 
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateAsync(int id, [FromBody] RoomUpdateDTO model)
+        public async Task<IActionResult> UpdateAsync(int id, [FromForm] RoomUpdateDTO model)
         {
             var rsp = new Response<bool>();
 
@@ -122,7 +122,7 @@ namespace InnSystem.API.Controllers
             }
         }
         [HttpPost]
-        public async Task<IActionResult> CreateAsync([FromBody] RoomCreateDTO model)
+        public async Task<IActionResult> CreateAsync([FromForm] RoomCreateDTO model)
         {
             var rsp = new Response<RoomDTO>();
             try

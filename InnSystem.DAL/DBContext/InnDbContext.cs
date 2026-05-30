@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 // se agrega la referencia a modelos
@@ -49,7 +49,9 @@ public partial class InnDbContext : DbContext
 
     public virtual DbSet<User> Users { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) { }
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseNpgsql("Host=localhost;Database=innDB;Username=postgres;Password=pixel10");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -290,6 +292,9 @@ public partial class InnDbContext : DbContext
             entity.HasIndex(e => e.RoomNumber, "rooms_room_number_key").IsUnique();
 
             entity.Property(e => e.IdRoom).HasColumnName("id_room");
+            entity.Property(e => e.BasePrice)
+                .HasPrecision(10, 2)
+                .HasColumnName("base_price");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("CURRENT_TIMESTAMP")
                 .HasColumnName("created_at");
@@ -370,14 +375,12 @@ public partial class InnDbContext : DbContext
             entity.HasIndex(e => e.Name, "room_types_name_key").IsUnique();
 
             entity.Property(e => e.IdRoomType).HasColumnName("id_room_type");
-            entity.Property(e => e.BasePrice)
-                .HasPrecision(10, 2)
-                .HasColumnName("base_price");
             entity.Property(e => e.Description).HasColumnName("description");
             entity.Property(e => e.GuestCapacity).HasColumnName("guest_capacity");
             entity.Property(e => e.Name)
                 .HasMaxLength(50)
                 .HasColumnName("name");
+            entity.Property(e => e.DeletedAt).HasColumnName("deleted_at");
         });
 
         modelBuilder.Entity<Season>(entity =>
@@ -396,6 +399,7 @@ public partial class InnDbContext : DbContext
                 .HasMaxLength(100)
                 .HasColumnName("season_name");
             entity.Property(e => e.StartDate).HasColumnName("start_date");
+            entity.Property(e => e.DeletedAt).HasColumnName("deleted_at");
         });
 
         modelBuilder.Entity<Service>(entity =>
@@ -410,6 +414,7 @@ public partial class InnDbContext : DbContext
             entity.Property(e => e.Name)
                 .HasMaxLength(100)
                 .HasColumnName("name");
+            entity.Property(e => e.DeletedAt).HasColumnName("deleted_at");
         });
 
         modelBuilder.Entity<User>(entity =>

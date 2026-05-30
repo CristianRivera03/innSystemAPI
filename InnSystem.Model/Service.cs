@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace InnSystem.Model;
@@ -10,4 +10,6 @@ public partial class Service
     public string Name { get; set; } = null!;
 
     public virtual ICollection<Room> IdRooms { get; set; } = new List<Room>();
+
+    public DateTime? DeletedAt { get; set; }
 }

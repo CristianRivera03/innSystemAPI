@@ -1,16 +1,17 @@
+using InnSystem.BLL.Services;
+using InnSystem.BLL.Services.Contract;
 using InnSystem.DAL.DBConext;
+using InnSystem.DAL.Repositories;
+using InnSystem.DAL.Repositories.Contract;
+using InnSystem.Model;
+using InnSystem.Utility;
+using InnSystem.Utility.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Text;
-
-using InnSystem.DAL.Repositories.Contract;
-using InnSystem.DAL.Repositories;
-using InnSystem.BLL.Services.Contract;
-using InnSystem.BLL.Services;
-using InnSystem.Utility;
 
 namespace InnSystem.IOC
 {
@@ -36,6 +37,11 @@ namespace InnSystem.IOC
                 cfg.AddProfile<AutoMapperProfile>();
             }, typeof(AutoMapperProfile));
 
+            //Cloudinary 
+            services.AddScoped<ICloudinaryUtility, CloudinaryUtility>();
+            services.Configure<CloudinarySettings>(configuration.GetSection("CloudinarySettings"));
+
+
 
             //Servicios
             services.AddScoped<IBookingService, BookingService>();
@@ -44,6 +50,10 @@ namespace InnSystem.IOC
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<ICatalogService, CatalogService>();
             services.AddScoped<IModuleService, ModuleService>();
+            services.AddScoped<IRoomTypeService, RoomTypeService>();
+            services.AddScoped<IServiceManagerService, ServiceManagerService>();
+            services.AddScoped<ISeasonService, SeasonService>();
+            services.AddScoped<IPaymentService, PaymentService>();
 
         }
     }

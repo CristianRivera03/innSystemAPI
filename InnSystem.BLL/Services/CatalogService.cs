@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using InnSystem.BLL.Services.Contract;
 using InnSystem.DAL.Repositories.Contract;
 using InnSystem.DTO.Catalogs;
@@ -16,13 +16,20 @@ namespace InnSystem.BLL.Services
     {
         private readonly IGenericRepository<RoomType> _roomTypeRepository;
         private readonly IGenericRepository<RoomStatus> _roomStatusRepository;
+        private readonly IGenericRepository<Service> _serviceRepository;
         private readonly IMapper _mapper;
         private readonly ILogger<CatalogService> _logger;
 
-        public CatalogService(IGenericRepository<RoomType> roomTypeRepository, IGenericRepository<RoomStatus> roomStatusRepository, IMapper mapper, ILogger<CatalogService> logger)
+        public CatalogService(
+            IGenericRepository<RoomType> roomTypeRepository, 
+            IGenericRepository<RoomStatus> roomStatusRepository, 
+            IGenericRepository<Service> serviceRepository,
+            IMapper mapper, 
+            ILogger<CatalogService> logger)
         {
             _roomTypeRepository = roomTypeRepository;
             _roomStatusRepository = roomStatusRepository;
+            _serviceRepository = serviceRepository;
             _mapper = mapper;
             _logger = logger;
         }
@@ -34,11 +41,13 @@ namespace InnSystem.BLL.Services
                 //extraccion de tablas 
                 var types = await _roomTypeRepository.Query().ToListAsync();
                 var statuses = await _roomStatusRepository.Query().ToListAsync();
+                var services = await _serviceRepository.Query().ToListAsync();
 
                 return new CatalogDTO
                 {
                     RoomTypes = _mapper.Map<List<RoomTypeDTO>>(types),
-                    RoomStatuses = _mapper.Map<List<StatusDTO>>(statuses)
+                    RoomStatuses = _mapper.Map<List<StatusDTO>>(statuses),
+                    Services = _mapper.Map<List<InnSystem.DTO.Rooms.ServiceDTO>>(services)
                 };
 
             }catch(Exception ex)

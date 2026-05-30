@@ -19,6 +19,8 @@ public partial class Room
 
     public int IdStatus { get; set; }
 
+    public decimal BasePrice { get; set; }
+
     public virtual ICollection<Booking> Bookings { get; set; } = new List<Booking>();
 
     public virtual RoomType? IdRoomTypeNavigation { get; set; }

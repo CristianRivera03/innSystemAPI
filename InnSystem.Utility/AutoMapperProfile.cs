@@ -45,14 +45,26 @@ namespace InnSystem.Utility
             #endregion Users
 
             #region Rooms
+            CreateMap<Service, ServiceDTO>();
+            CreateMap<ServiceCreateDTO, Service>();
+            CreateMap<ServiceUpdateDTO, Service>();
+
+            CreateMap<RoomImage, RoomImageDTO>();
+
             CreateMap<Room, RoomDTO>()
                 .ForMember(destino => destino.RoomType, opt => opt.MapFrom(origen => origen.IdRoomTypeNavigation != null ? origen.IdRoomTypeNavigation.Name : null))
-                .ForMember(destino => destino.BasePrice, opt => opt.MapFrom(origen => origen.IdRoomTypeNavigation != null ? origen.IdRoomTypeNavigation.BasePrice : 0))
                 .ForMember(destino => destino.GuestCapacity, opt => opt.MapFrom(origen => origen.IdRoomTypeNavigation != null ? origen.IdRoomTypeNavigation.GuestCapacity : 0))
-                .ForMember(destino => destino.OperationalStatus, opt => opt.MapFrom(origen => origen.IdStatusNavigation.Name));
+                .ForMember(destino => destino.OperationalStatus, opt => opt.MapFrom(origen => origen.IdStatusNavigation.Name))
+                .ForMember(destino => destino.Services, opt => opt.MapFrom(origen => origen.IdServices))
+                .ForMember(destino => destino.Images, opt => opt.MapFrom(origen => origen.RoomImages));
 
-            CreateMap<RoomCreateDTO, Room>();
-            CreateMap<RoomUpdateDTO, Room>();
+            CreateMap<RoomCreateDTO, Room>()
+                .ForMember(dest => dest.IdServices, opt => opt.Ignore())
+                .ForMember(dest => dest.RoomImages, opt => opt.Ignore());
+
+            CreateMap<RoomUpdateDTO, Room>()
+                .ForMember(dest => dest.IdServices, opt => opt.Ignore())
+                .ForMember(dest => dest.RoomImages, opt => opt.Ignore());
             #endregion Rooms
 
             #region Bookings
@@ -74,7 +86,13 @@ namespace InnSystem.Utility
 
             #region Catalogs
             CreateMap<RoomType, RoomTypeDTO>().ReverseMap();
+            CreateMap<RoomTypeCreateDTO, RoomType>();
+            CreateMap<RoomTypeUpdateDTO, RoomType>();
             
+            CreateMap<Season, SeasonDTO>().ReverseMap();
+            CreateMap<SeasonCreateDTO, Season>();
+            CreateMap<SeasonUpdateDTO, Season>();
+
             CreateMap<RoomStatus, StatusDTO>()
                 .ForMember(destino => destino.Id, opt => opt.MapFrom(origen => origen.IdStatus))
                 .ReverseMap()

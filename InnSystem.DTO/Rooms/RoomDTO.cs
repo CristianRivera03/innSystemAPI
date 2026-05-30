@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace InnSystem.DTO.Rooms
 {
@@ -14,5 +15,8 @@ namespace InnSystem.DTO.Rooms
         public int IdStatus { get; set; }
         public string? OperationalStatus { get; set; }
         public DateTime? CreatedAt { get; set; }
+
+        public List<ServiceDTO>? Services { get; set; }
+        public List<RoomImageDTO>? Images { get; set; }
     }
 }

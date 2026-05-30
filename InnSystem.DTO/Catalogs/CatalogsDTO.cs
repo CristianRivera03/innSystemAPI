@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -14,7 +14,6 @@ namespace InnSystem.DTO.Catalogs
     {
         public int IdRoomType { get; set; }
         public string Name { get; set; }
-        public decimal BasePrice { get; set; }
         public int GuestCapacity { get; set; }
     }
 
@@ -22,5 +21,6 @@ namespace InnSystem.DTO.Catalogs
     {
         public List<RoomTypeDTO> RoomTypes { get; set; }
         public List<StatusDTO> RoomStatuses { get; set; }
+        public List<InnSystem.DTO.Rooms.ServiceDTO> Services { get; set; }
     }
 }

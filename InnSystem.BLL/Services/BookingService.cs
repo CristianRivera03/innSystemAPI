@@ -78,7 +78,6 @@ namespace InnSystem.BLL.Services
                     model.GuestsCount
                 );
 
-                // El SP devuelve el Guid de la nueva reserva; recuperamos el DTO completo.
                 var bookingDto = await GetByIdAsync(newBookingId);
 
                 if (bookingDto == null)

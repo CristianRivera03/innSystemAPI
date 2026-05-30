@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace InnSystem.Model;
@@ -14,4 +14,6 @@ public partial class Season
     public DateOnly EndDate { get; set; }
 
     public decimal PriceMultiplier { get; set; }
+    
+    public DateTime? DeletedAt { get; set; }
 }
