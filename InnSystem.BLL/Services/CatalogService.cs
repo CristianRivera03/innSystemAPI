@@ -16,19 +16,22 @@ namespace InnSystem.BLL.Services
     {
         private readonly IGenericRepository<RoomType> _roomTypeRepository;
         private readonly IGenericRepository<RoomStatus> _roomStatusRepository;
+        private readonly IGenericRepository<BookingStatus> _bookingStatusRepository;
         private readonly IGenericRepository<Service> _serviceRepository;
         private readonly IMapper _mapper;
         private readonly ILogger<CatalogService> _logger;
 
         public CatalogService(
             IGenericRepository<RoomType> roomTypeRepository, 
-            IGenericRepository<RoomStatus> roomStatusRepository, 
+            IGenericRepository<RoomStatus> roomStatusRepository,
+            IGenericRepository<BookingStatus> bookingStatusRepository,
             IGenericRepository<Service> serviceRepository,
             IMapper mapper, 
             ILogger<CatalogService> logger)
         {
             _roomTypeRepository = roomTypeRepository;
             _roomStatusRepository = roomStatusRepository;
+            _bookingStatusRepository = bookingStatusRepository;
             _serviceRepository = serviceRepository;
             _mapper = mapper;
             _logger = logger;
@@ -40,13 +43,15 @@ namespace InnSystem.BLL.Services
             {
                 //extraccion de tablas 
                 var types = await _roomTypeRepository.Query().ToListAsync();
-                var statuses = await _roomStatusRepository.Query().ToListAsync();
+                var roomStatuses = await _roomStatusRepository.Query().ToListAsync();
+                var bookingStatuses = await _bookingStatusRepository.Query().ToListAsync();
                 var services = await _serviceRepository.Query().ToListAsync();
 
                 return new CatalogDTO
                 {
                     RoomTypes = _mapper.Map<List<RoomTypeDTO>>(types),
-                    RoomStatuses = _mapper.Map<List<StatusDTO>>(statuses),
+                    RoomStatuses = _mapper.Map<List<StatusDTO>>(roomStatuses),
+                    BookingStatuses = _mapper.Map<List<StatusDTO>>(bookingStatuses),
                     Services = _mapper.Map<List<InnSystem.DTO.Rooms.ServiceDTO>>(services)
                 };
 

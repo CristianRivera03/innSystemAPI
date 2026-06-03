@@ -4,22 +4,11 @@ namespace InnSystem.DTO.Wompi
 {
     public class WompiWebhookDTO
     {
-        public string Evento { get; set; } = string.Empty;
-        public WompiDataDTO Data { get; set; } = new WompiDataDTO();
-    }
-
-    public class WompiDataDTO
-    {
-        public WompiTransaccionDTO Transaccion { get; set; } = new WompiTransaccionDTO();
-        public WompiEnlacePagoDTO EnlacePago { get; set; } = new WompiEnlacePagoDTO();
-    }
-
-    public class WompiTransaccionDTO
-    {
         public string IdTransaccion { get; set; } = string.Empty;
-        public decimal Monto { get; set; }
-        public string Estado { get; set; } = string.Empty;
-        public string Referencia { get; set; } = string.Empty;
+        public string Monto { get; set; } = string.Empty;
+        public string ResultadoTransaccion { get; set; } = string.Empty;
+        public string IdExterno { get; set; } = string.Empty;
+        public WompiEnlacePagoDTO EnlacePago { get; set; } = new WompiEnlacePagoDTO();
     }
 
     public class WompiEnlacePagoDTO

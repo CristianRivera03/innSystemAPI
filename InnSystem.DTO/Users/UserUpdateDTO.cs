@@ -9,6 +9,7 @@ namespace InnSystem.DTO.Users
         public string LastName { get; set; } = null!;
         public string? Phone { get; set; }
         public string? DocumentId { get; set; }
+        public string Email { get; set; } = null!;
         public bool IsActive { get; set; }
     }
 }

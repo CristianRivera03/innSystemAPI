@@ -43,6 +43,14 @@ namespace InnSystem.IOC
 
 
 
+            // Email and PDF
+            services.Configure<InnSystem.Utility.Settings.EmailSettings>(configuration.GetSection("EmailSettings"));
+            services.AddScoped<IEmailService, InnSystem.Utility.Services.EmailService>();
+            services.AddScoped<IPdfService, InnSystem.Utility.Services.PdfService>();
+
+            // QuestPDF Community License
+            QuestPDF.Settings.License = QuestPDF.Infrastructure.LicenseType.Community;
+
             //Servicios
             services.AddScoped<IBookingService, BookingService>();
             services.AddScoped<IRoomService, RoomService>();

@@ -33,6 +33,8 @@ namespace InnSystem.BLL.Services
                 var listBooking = await queryBooking
                     .Include(b => b.IdUserNavigation)
                     .Include(b => b.IdStatusNavigation)
+                    .Include(b => b.IdRoomNavigation)
+                    .OrderByDescending(b => b.CreatedAt)
                     .ToListAsync();
 
                 return _mapper.Map<List<BookingDTO>>(listBooking);
@@ -51,6 +53,7 @@ namespace InnSystem.BLL.Services
                 var booking = await _bookingRepository.Query(b => b.IdBooking == id && b.DeletedAt == null)
                     .Include(b => b.IdUserNavigation)
                     .Include(b => b.IdStatusNavigation)
+                    .Include(b => b.IdRoomNavigation)
                     .FirstOrDefaultAsync();
 
                 return booking == null ? null : _mapper.Map<BookingDTO>(booking);
@@ -116,7 +119,7 @@ namespace InnSystem.BLL.Services
                 if (booking == null) return false;
                 
                 // Usually Cancellation logic goes here, setting status to 3 or 4 (Cancelled)
-                booking.IdStatus = 4; // Assuming 4 is Cancelled/Inactiva
+                booking.IdStatus = 3; // 3 = Cancelled
                 booking.DeletedAt = DateTime.UtcNow;
                 
                 return await _bookingRepository.SoftDelete(booking);

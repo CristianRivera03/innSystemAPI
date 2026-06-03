@@ -21,6 +21,7 @@ namespace InnSystem.DTO.Catalogs
     {
         public List<RoomTypeDTO> RoomTypes { get; set; }
         public List<StatusDTO> RoomStatuses { get; set; }
+        public List<StatusDTO> BookingStatuses { get; set; }
         public List<InnSystem.DTO.Rooms.ServiceDTO> Services { get; set; }
     }
 }

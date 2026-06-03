@@ -1,6 +1,7 @@
 using InnSystem.API.Utility;
 using InnSystem.BLL.Services;
 using InnSystem.BLL.Services.Contract;
+using InnSystem.DTO.Common;
 using InnSystem.DTO.Rooms;
 using InnSystem.DTO.Users;
 using Microsoft.AspNetCore.Http;
@@ -31,6 +32,23 @@ namespace InnSystem.API.Controllers
                 rsp.status = true;
                 rsp.value = await _userService.GetAllAsync();
 
+            }
+            catch (Exception ex)
+            {
+                rsp.status = false;
+                rsp.msg = ex.Message;
+            }
+            return Ok(rsp);
+        }
+
+        [HttpGet("paginated")]
+        public async Task<IActionResult> GetPaginated([FromQuery] string? search, [FromQuery] string? roleName, [FromQuery] int page = 1, [FromQuery] int limit = 8)
+        {
+            var rsp = new Response<PagedResultDTO<UserDTO>>();
+            try
+            {
+                rsp.status = true;
+                rsp.value = await _userService.GetPaginatedAsync(search, roleName, page, limit);
             }
             catch (Exception ex)
             {
@@ -86,7 +104,7 @@ namespace InnSystem.API.Controllers
             catch (Exception ex)
             {
                 rsp.status = false;
-                rsp.msg = ex.Message;
+                rsp.msg = ex.Message + (ex.InnerException != null ? " | " + ex.InnerException.Message : "");
                 return StatusCode(StatusCodes.Status500InternalServerError, rsp);
             }
         }
@@ -110,6 +128,48 @@ namespace InnSystem.API.Controllers
             {
                 rsp.status = false;
                 rsp.msg = ex.Message;
+                return StatusCode(StatusCodes.Status500InternalServerError, rsp);
+            }
+        }
+
+        [HttpPost("forgot-password")]
+        public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordDTO model)
+        {
+            var rsp = new Response<bool>();
+            try
+            {
+                rsp.status = true;
+                rsp.value = await _userService.ForgotPasswordAsync(model.Email);
+                return Ok(rsp);
+            }
+            catch (Exception ex)
+            {
+                rsp.status = false;
+                rsp.msg = "Ocurrió un error al solicitar la recuperación.";
+                return StatusCode(StatusCodes.Status500InternalServerError, rsp);
+            }
+        }
+
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDTO model)
+        {
+            var rsp = new Response<bool>();
+            try
+            {
+                rsp.status = true;
+                rsp.value = await _userService.ResetPasswordAsync(model);
+                return Ok(rsp);
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                rsp.status = false;
+                rsp.msg = ex.Message;
+                return BadRequest(rsp);
+            }
+            catch (Exception ex)
+            {
+                rsp.status = false;
+                rsp.msg = "Ocurrió un error al restablecer la contraseña.";
                 return StatusCode(StatusCodes.Status500InternalServerError, rsp);
             }
         }

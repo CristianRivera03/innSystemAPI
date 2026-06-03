@@ -16,21 +16,35 @@ namespace InnSystem.API.Controllers
         }
 
         [HttpPost("wompi")]
-        public async Task<IActionResult> ReceiveWompiWebhook([FromBody] WompiWebhookDTO webhookData)
+        public async Task<IActionResult> ReceiveWompiWebhook([FromBody] System.Text.Json.JsonElement payload)
         {
-            if (webhookData == null || webhookData.Data == null)
-                return BadRequest("Payload inválido.");
+            var jsonString = payload.ToString();
+            System.Console.WriteLine("---------------- WOMPI WEBHOOK RECEIVED ----------------");
+            System.Console.WriteLine(jsonString);
+            System.Console.WriteLine("---------------------------------------------------------");
 
             try
             {
+                var webhookData = System.Text.Json.JsonSerializer.Deserialize<WompiWebhookDTO>(
+                    jsonString, 
+                    new System.Text.Json.JsonSerializerOptions { PropertyNameCaseInsensitive = true }
+                );
+
+                if (webhookData == null || string.IsNullOrEmpty(webhookData.IdTransaccion))
+                    return BadRequest("Payload inválido.");
+
                 var success = await _paymentService.ProcessWompiWebhookAsync(webhookData);
                 if (success)
                     return Ok();
                 else
+                {
+                    System.Console.WriteLine("ProcessWompiWebhookAsync retornó false.");
                     return BadRequest("Error procesando el webhook.");
+                }
             }
             catch (Exception ex)
             {
+                System.Console.WriteLine($"Webhook Error: {ex.Message}");
                 return StatusCode(500, ex.Message);
             }
         }

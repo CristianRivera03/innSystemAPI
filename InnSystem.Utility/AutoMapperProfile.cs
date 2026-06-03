@@ -74,7 +74,8 @@ namespace InnSystem.Utility
                 .ForMember(destino => destino.Email,     opt => opt.MapFrom(origen => origen.IdUserNavigation.Email))
                 .ForMember(destino => destino.Phone,     opt => opt.MapFrom(origen => origen.IdUserNavigation.Phone))
                 .ForMember(destino => destino.DocumentId,opt => opt.MapFrom(origen => origen.IdUserNavigation.DocumentId))
-                .ForMember(destino => destino.Status,    opt => opt.MapFrom(origen => origen.IdStatusNavigation.Name));
+                .ForMember(destino => destino.Status,    opt => opt.MapFrom(origen => origen.IdStatusNavigation.Name))
+                .ForMember(destino => destino.RoomNumber, opt => opt.MapFrom(origen => origen.IdRoomNavigation.RoomNumber));
 
             CreateMap<BookingCreateDTO, Booking>();
             #endregion Bookings

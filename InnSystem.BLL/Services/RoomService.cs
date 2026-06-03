@@ -312,7 +312,9 @@ namespace InnSystem.BLL.Services
                         )
                     )
                     .Include(r => r.IdRoomTypeNavigation)
-                    .Include(r => r.IdStatusNavigation);
+                    .Include(r => r.IdStatusNavigation)
+                    .Include(r => r.IdServices)
+                    .Include(r => r.RoomImages);
 
                 var rooms = await query.ToListAsync();
                 return _mapper.Map<List<RoomDTO>>(rooms);

@@ -23,6 +23,8 @@ builder.Services.AddOpenApi();
 //se llama a la dependecias ICO
 builder.Services.DependencyInyections(builder.Configuration);
 
+// Add Data Protection for tokens
+builder.Services.AddDataProtection();
 
 var app = builder.Build();
 
